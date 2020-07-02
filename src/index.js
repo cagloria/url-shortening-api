@@ -2,29 +2,16 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-function Input() {
-    const [urlInput, setUrlInput] = useState("");
+function URLInput({ onUrlSubmit }) {
+    const [input, setInput] = useState("");
 
     function handleChange(event) {
-        setUrlInput(event.target.value);
+        setInput(event.target.value);
     }
 
     function handleSubmit(event) {
+        onUrlSubmit(input);
         event.preventDefault();
-
-        fetch("https://rel.ink/api/links/", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify({ url: urlInput }),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                console.log("https://rel.ink/" + data.hashid); // Shortened link
-            })
-            .catch((error) => console.log(error));
     }
 
     return (
@@ -34,10 +21,41 @@ function Input() {
                 name="input-field"
                 id="input-field"
                 onChange={handleChange}
+                required
             />
             <input type="submit" value="Shorten It!" />
         </form>
     );
 }
 
-ReactDOM.render(<Input />, document.getElementById("root"));
+function App() {
+    const [newId, updateId] = useState(1);
+    const [urlList, setUrlList] = useState([]);
+
+    function shortenUrl(inputUrl) {
+        fetch("https://rel.ink/api/links/", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ url: inputUrl }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setUrlList(
+                    urlList.concat({
+                        id: newId,
+                        original: inputUrl,
+                        shortened: "https://rel.ink/" + data.hashid,
+                    })
+                );
+            })
+            .catch((error) => console.log(error));
+
+        updateId(newId + 1);
+    }
+
+    return <URLInput onUrlSubmit={shortenUrl} />;
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
