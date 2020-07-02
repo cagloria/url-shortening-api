@@ -1,12 +1,26 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import $ from "jquery";
 import "./index.css";
 
-function URLItem({ json }) {
+function URLItem({ jsonObj }) {
+    function copyToClipboard() {
+        // Create temporary input field to copy text from
+        let $text = $("<input>");
+        $text.val(jsonObj.shortened).css("filter", "opacity(0)");
+        $("body").append($text);
+
+        // Select and copy text
+        $text.select();
+        document.execCommand("copy");
+        $text.remove();
+    }
+
     return (
         <li>
-            <a href={json.original}>{json.original}</a> ={" "}
-            <a href={json.shortened}>{json.shortened}</a>
+            <a href={jsonObj.original}>{jsonObj.original}</a> ={" "}
+            <a href={jsonObj.shortened}>{jsonObj.shortened}</a>
+            <button onClick={copyToClipboard}>Copy</button>
         </li>
     );
 }
@@ -43,7 +57,9 @@ function App() {
     const [newId, updateId] = useState(1);
     const [urlList, setUrlList] = useState([]);
 
-    const listItems = urlList.map((url) => <URLItem json={url} key={url.id} />);
+    const listItems = urlList.map((url) => (
+        <URLItem jsonObj={url} key={url.id} />
+    ));
 
     function shortenUrl(inputUrl) {
         fetch("https://rel.ink/api/links/", {
