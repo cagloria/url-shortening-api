@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
+function URLItem({ json }) {
+    return (
+        <li>
+            <a href={json.original}>{json.original}</a> ={" "}
+            <a href={json.shortened}>{json.shortened}</a>
+        </li>
+    );
+}
+
 function URLInput({ onUrlSubmit }) {
     const [input, setInput] = useState("");
 
@@ -11,6 +20,8 @@ function URLInput({ onUrlSubmit }) {
 
     function handleSubmit(event) {
         onUrlSubmit(input);
+        event.target.reset();
+        setInput("");
         event.preventDefault();
     }
 
@@ -31,6 +42,8 @@ function URLInput({ onUrlSubmit }) {
 function App() {
     const [newId, updateId] = useState(1);
     const [urlList, setUrlList] = useState([]);
+
+    const listItems = urlList.map((url) => <URLItem json={url} key={url.id} />);
 
     function shortenUrl(inputUrl) {
         fetch("https://rel.ink/api/links/", {
@@ -55,7 +68,12 @@ function App() {
         updateId(newId + 1);
     }
 
-    return <URLInput onUrlSubmit={shortenUrl} />;
+    return (
+        <>
+            <URLInput onUrlSubmit={shortenUrl} />
+            <ul>{listItems}</ul>
+        </>
+    );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
