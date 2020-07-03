@@ -34,14 +34,25 @@ function URLInput({ onUrlSubmit }) {
         setError("");
     }
 
+    function getShortenedURL() {
+        $.post("https://rel.ink/api/links/", { url: input })
+            .done(function (data) {
+                onUrlSubmit(input, "https://rel.ink/" + data.hashid);
+            })
+            .fail(function (xhr, status, error) {
+                console.log(xhr);
+                setError("Error: " + xhr.status + ". " + xhr.responseText);
+            });
+    }
+
     function handleSubmit(event) {
         event.preventDefault();
         if (input === "") {
             setError("Please add a link");
         } else {
-            onUrlSubmit(input);
-            event.target.reset();
+            getShortenedURL();
             setInput("");
+            event.target.reset();
         }
     }
 
@@ -67,26 +78,14 @@ function App() {
         <URLItem jsonObj={url} key={url.id} />
     ));
 
-    function shortenUrl(inputUrl) {
-        fetch("https://rel.ink/api/links/", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify({ url: inputUrl }),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                setUrlList(
-                    urlList.concat({
-                        id: newId,
-                        original: inputUrl,
-                        shortened: "https://rel.ink/" + data.hashid,
-                    })
-                );
+    function shortenUrl(inputUrl, shortenedURL) {
+        setUrlList(
+            urlList.concat({
+                id: newId,
+                original: inputUrl,
+                shortened: shortenedURL,
             })
-            .catch((error) => console.log(error));
-
+        );
         updateId(newId + 1);
     }
 
