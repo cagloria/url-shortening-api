@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
-import "./index.css";
+import "./styles/landing-page.css";
 
 function URLItem({ jsonObj }) {
     function copyToClipboard() {
