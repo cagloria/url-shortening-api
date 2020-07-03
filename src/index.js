@@ -27,16 +27,22 @@ function URLItem({ jsonObj }) {
 
 function URLInput({ onUrlSubmit }) {
     const [input, setInput] = useState("");
+    const [error, setError] = useState("");
 
     function handleChange(event) {
         setInput(event.target.value);
+        setError("");
     }
 
     function handleSubmit(event) {
-        onUrlSubmit(input);
-        event.target.reset();
-        setInput("");
         event.preventDefault();
+        if (input === "") {
+            setError("Please add a link");
+        } else {
+            onUrlSubmit(input);
+            event.target.reset();
+            setInput("");
+        }
     }
 
     return (
@@ -46,8 +52,8 @@ function URLInput({ onUrlSubmit }) {
                 name="input-field"
                 id="input-field"
                 onChange={handleChange}
-                required
             />
+            <p>{error}</p>
             <input type="submit" value="Shorten It!" />
         </form>
     );
