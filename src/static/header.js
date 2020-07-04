@@ -21,7 +21,7 @@ function Header() {
 
             <a href="index.html">Login</a>
 
-            <button>Sign Up</button>
+            <button className="button">Sign Up</button>
         </header>
     );
 }

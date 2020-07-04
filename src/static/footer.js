@@ -7,24 +7,44 @@ function Footer() {
             <img src={logo} alt="Shortly logo" />
             <p>Features</p>
             <ul>
-                <li>Link Shortening</li>
-                <li>Branded Links</li>
-                <li>Analytics</li>
+                <li>
+                    <a href="index.html">Link Shortening</a>
+                </li>
+                <li>
+                    <a href="index.html">Branded Links</a>
+                </li>
+                <li>
+                    <a href="index.html">Analytics</a>
+                </li>
             </ul>
 
             <p>Resources</p>
             <ul>
-                <li>Blog</li>
-                <li>Developers</li>
-                <li>Support</li>
+                <li>
+                    <a href="index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="index.html">Developers</a>
+                </li>
+                <li>
+                    <a href="index.html">Support</a>
+                </li>
             </ul>
 
             <p>Company</p>
             <ul>
-                <li>About</li>
-                <li>Our Team</li>
-                <li>Careers</li>
-                <li>Contact</li>
+                <li>
+                    <a href="index.html">About</a>
+                </li>
+                <li>
+                    <a href="index.html">Our Team</a>
+                </li>
+                <li>
+                    <a href="index.html">Careers</a>
+                </li>
+                <li>
+                    <a href="index.html">Contact</a>
+                </li>
             </ul>
 
             <p>

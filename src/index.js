@@ -25,7 +25,9 @@ function URLItem({ jsonObj }) {
         <li>
             <a href={jsonObj.original}>{jsonObj.original}</a> ={" "}
             <a href={jsonObj.shortened}>{jsonObj.shortened}</a>
-            <button onClick={copyToClipboard}>Copy</button>
+            <button onClick={copyToClipboard} className="button button--copy">
+                Copy
+            </button>
         </li>
     );
 }
@@ -68,9 +70,14 @@ function URLInput({ onUrlSubmit }) {
                 name="input-field"
                 id="input-field"
                 onChange={handleChange}
+                placeholder="Shorten a link here..."
             />
             <p>{error}</p>
-            <input type="submit" value="Shorten It!" />
+            <input
+                type="submit"
+                value="Shorten It!"
+                className="button button--shorten"
+            />
         </form>
     );
 }

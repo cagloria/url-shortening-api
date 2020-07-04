@@ -9,7 +9,7 @@ function Intro() {
                 Build your brand’s recognition and get detailed insights on how
                 your links are performing.
             </p>
-            <button>Get Started</button>
+            <button className="button">Get Started</button>
             <img
                 src={illustration}
                 alt="An illustration of a person sitting at a desk, using on a computer"

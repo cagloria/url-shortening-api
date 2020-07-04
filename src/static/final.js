@@ -4,7 +4,7 @@ function Final() {
     return (
         <section className="final-section">
             <h2>Boost your links today</h2>
-            <button>Get Started</button>
+            <button className="button">Get Started</button>
         </section>
     );
 }
