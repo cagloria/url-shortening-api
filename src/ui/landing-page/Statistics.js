@@ -1,7 +1,7 @@
 import React from "react";
-import iconBrand from "../images/icon-brand-recognition.svg";
-import iconRecords from "../images/icon-detailed-records.svg";
-import iconCustom from "../images/icon-fully-customizable.svg";
+import iconBrand from "../../images/icon-brand-recognition.svg";
+import iconRecords from "../../images/icon-detailed-records.svg";
+import iconCustom from "../../images/icon-fully-customizable.svg";
 
 function Statistics() {
     return (
