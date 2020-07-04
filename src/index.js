@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
+import Header from "./static/header.js";
+import Intro from "./static/intro.js";
+import Statistics from "./static/statistics.js";
+import Final from "./static/final.js";
+import Footer from "./static/footer.js";
 import "./styles/landing-page.css";
 
 function URLItem({ jsonObj }) {
@@ -91,8 +96,17 @@ function App() {
 
     return (
         <>
-            <URLInput onUrlSubmit={shortenUrl} />
-            <ul>{listItems}</ul>
+            <Header />
+            <main>
+                <Intro />
+                <section className="form-section">
+                    <URLInput onUrlSubmit={shortenUrl} />
+                    <ul>{listItems}</ul>
+                </section>
+                <Statistics />
+                <Final />
+            </main>
+            <Footer />
         </>
     );
 }
