@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
-import Header from "./static/header.js";
-import Intro from "./static/intro.js";
-import Statistics from "./static/statistics.js";
-import Final from "./static/final.js";
-import Footer from "./static/footer.js";
+import Header from "./site/header.js";
+import Intro from "./landing-page/intro.js";
+import Statistics from "./landing-page/statistics.js";
+import Final from "./landing-page/final.js";
+import Footer from "./site/footer.js";
+import "./styles/site.css";
 import "./styles/landing-page.css";
 
 function URLItem({ jsonObj }) {

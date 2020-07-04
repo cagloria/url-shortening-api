@@ -10,10 +10,10 @@ function Intro() {
                 your links are performing.
             </p>
             <button className="button">Get Started</button>
-            {/* <img
+            <img
                 src={illustration}
                 alt="An illustration of a person sitting at a desk, using on a computer"
-            /> */}
+            />
         </section>
     );
 }

@@ -12,6 +12,7 @@ $color-neutral-5: hsl(260, 8%, 14%);
 // Header
 header {
     position: sticky;
+    z-index: 9;
     top: 0;
     display: flex;
     align-items: center;
