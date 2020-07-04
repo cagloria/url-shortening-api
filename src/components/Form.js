@@ -57,19 +57,25 @@ function URLInput({ onUrlSubmit }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="url-form" onSubmit={handleSubmit}>
             <input
                 type="url"
                 name="input-field"
                 id="input-field"
+                className={
+                    "input-field" +
+                    (error.length > 0 ? " input-field--invalid" : "")
+                }
                 onChange={handleChange}
                 placeholder="Shorten a link here..."
             />
-            <p>{error}</p>
+            <p className="url-form__error-message">
+                {error.length > 0 ? error : null}
+            </p>
             <input
                 type="submit"
                 value="Shorten It!"
-                className="button button--shorten"
+                className="button url-form__submit-btn"
             />
         </form>
     );
@@ -96,7 +102,7 @@ function Form() {
     return (
         <section className="form-section section-padding">
             <URLInput onUrlSubmit={shortenUrl} />
-            <ul>{listItems}</ul>
+            <ul className="url-list">{listItems}</ul>
         </section>
     );
 }
