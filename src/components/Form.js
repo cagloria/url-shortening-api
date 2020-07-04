@@ -15,10 +15,17 @@ function URLItem({ jsonObj }) {
     }
 
     return (
-        <li>
-            <a href={jsonObj.original}>{jsonObj.original}</a> ={" "}
-            <a href={jsonObj.shortened}>{jsonObj.shortened}</a>
-            <button onClick={copyToClipboard} className="button button--copy">
+        <li className="url-list__item">
+            <p className="url-list__original">{jsonObj.original}</p>
+            <p className="url-list__shortened">
+                <a href={jsonObj.shortened} className=" link-primary">
+                    {jsonObj.shortened}
+                </a>
+            </p>
+            <button
+                onClick={copyToClipboard}
+                className="button url-list__copy-btn"
+            >
                 Copy
             </button>
         </li>
@@ -84,6 +91,23 @@ function URLInput({ onUrlSubmit }) {
 function Form() {
     const [newId, updateId] = useState(1);
     const [urlList, setUrlList] = useState([]);
+    // const [urlList, setUrlList] = useState([
+    //     {
+    //         id: 1,
+    //         original: "https://fonts.google.com/",
+    //         shortened: "https://fonts.google.com/",
+    //     },
+    //     {
+    //         id: 2,
+    //         original: "https://fonts.google.com/",
+    //         shortened: "https://fonts.google.com/",
+    //     },
+    //     {
+    //         id: 3,
+    //         original: "https://fonts.google.com/",
+    //         shortened: "https://fonts.google.com/",
+    //     },
+    // ]);
 
     const listItems = urlList.map((url) => (
         <URLItem jsonObj={url} key={url.id} />
@@ -101,8 +125,10 @@ function Form() {
     }
     return (
         <section className="form-section section-padding">
-            <URLInput onUrlSubmit={shortenUrl} />
-            <ul className="url-list">{listItems}</ul>
+            <div className="url-wrapper">
+                <URLInput onUrlSubmit={shortenUrl} />
+                <ul className="url-list">{listItems}</ul>
+            </div>
         </section>
     );
 }

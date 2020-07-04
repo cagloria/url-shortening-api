@@ -1,20 +1,22 @@
-$color-primary-1: hsl(180, 56%, 75%);
-$color-primary-2: hsl(180, 66%, 49%);
 $color-secondary-1: hsl(257, 27%, 26%);
 $color-accent-1: hsl(0, 87%, 67%);
 $color-neutral-1: hsl(0, 0%, 100%);
-$color-neutral-2: hsl(0, 0%, 75%);
-$color-neutral-3: hsl(257, 7%, 63%);
-$color-neutral-4: hsl(255, 11%, 22%);
-$color-neutral-5: hsl(260, 8%, 14%);
+$color-neutral-2: hsl(230, 25%, 95%);
+$color-neutral-3: hsl(0, 0%, 75%);
+$color-neutral-4: hsl(257, 7%, 63%);
+$color-neutral-5: hsl(255, 11%, 22%);
+$color-neutral-6: hsl(260, 8%, 14%);
 
+// ********************************************************
+// Intro section
 .intro-section {
     display: flex;
     overflow: hidden;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 50px;
+    padding-bottom: 168px;
     text-align: center;
+    background-color: $color-neutral-1;
     img {
         position: relative;
         top: 26px;
@@ -40,8 +42,16 @@ $color-neutral-5: hsl(260, 8%, 14%);
     }
 }
 
+// ********************************************************
+// Form Section
 .form-section {
+    margin-bottom: -52px;
     padding-top: 38px;
+}
+
+.url-wrapper {
+    position: relative;
+    top: -118px;
 }
 
 .url-form {
@@ -65,5 +75,64 @@ $color-neutral-5: hsl(260, 8%, 14%);
         width: 100%;
         height: 50px;
         border-radius: 10px;
+    }
+}
+
+.url-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding-left: 0;
+    list-style-type: none;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 22px;
+        padding-top: 8px;
+        padding-bottom: 16px;
+        border-radius: 4px;
+        background-color: $color-neutral-1;
+        > p {
+            font-size: 0.9em;
+            font-weight: 500;
+            margin: 0;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    &__original {
+        padding-top: 7px;
+        padding-bottom: 8px;
+        color: $color-neutral-6;
+        border-bottom: 1px solid $color-neutral-2;
+    }
+
+    &__shortened {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    &__copy-btn {
+        font-size: 0.8em;
+        box-sizing: border-box;
+        height: 40px;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-right: 25px;
+        padding-left: 25px;
+        border-radius: 10px;
+    }
+}
+
+// ********************************************************
+// Statistics Section
+.stats-section {
+    text-align: center;
+
+    p {
+        font-size: 1em;
+        font-weight: 500;
     }
 }
