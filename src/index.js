@@ -106,7 +106,7 @@ function App() {
             <Header />
             <main>
                 <Intro />
-                <section className="form-section">
+                <section className="form-section section-padding">
                     <URLInput onUrlSubmit={shortenUrl} />
                     <ul>{listItems}</ul>
                 </section>

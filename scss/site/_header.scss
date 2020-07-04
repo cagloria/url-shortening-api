@@ -1,0 +1,52 @@
+$color-primary-1: hsl(180, 56%, 75%);
+$color-primary-2: hsl(180, 66%, 49%);
+$color-secondary-1: hsl(257, 27%, 26%);
+$color-accent-1: hsl(0, 87%, 67%);
+$color-neutral-1: hsl(0, 0%, 100%);
+$color-neutral-2: hsl(0, 0%, 75%);
+$color-neutral-3: #9e9aa7;
+$color-neutral-4: hsl(255, 11%, 22%);
+$color-neutral-5: hsl(260, 8%, 14%);
+
+// ********************************************************
+// Header
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 90px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: $color-neutral-1;
+    a,
+    .button {
+        display: none;
+    }
+}
+
+// ********************************************************
+// Nav
+nav {
+    display: none;
+}
+
+.nav-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../../src/images/icon-nav-open.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &:hover {
+        cursor: pointer;
+    }
+    &--nav-open {
+        background-image: url("../../src/images/icon-nav-close.svg");
+    }
+}

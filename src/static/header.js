@@ -3,8 +3,8 @@ import logo from "../images/logo.svg";
 
 function Header() {
     return (
-        <header>
-            <img src={logo} alt="Shortly logo" />
+        <header className="section-padding">
+            <img src={logo} alt="Shortly logo" className="logo" />
             <nav>
                 <ul className="nav-list">
                     <li>
@@ -22,6 +22,8 @@ function Header() {
             <a href="index.html">Login</a>
 
             <button className="button">Sign Up</button>
+
+            <button className="nav-button"></button>
         </header>
     );
 }

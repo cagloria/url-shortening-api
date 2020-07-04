@@ -1,4 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+.section-padding {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 90px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+header a,
+header .button {
+  display: none;
+}
+
+nav {
+  display: none;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../../src/images/icon-nav-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+}
+
+.nav-button--nav-open {
+  background-image: url("../../src/images/icon-nav-close.svg");
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -70,4 +125,9 @@ input[type="url"] {
   padding-left: 40px;
   border: 0;
   border-radius: 10px;
+}
+
+.logo {
+  width: 121px;
+  height: 33px;
 }

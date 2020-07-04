@@ -5,7 +5,7 @@ import iconCustom from "../images/icon-fully-customizable.svg";
 
 function Statistics() {
     return (
-        <section className="stats-section">
+        <section className="stats-section section-padding">
             <h2>Advanced Statistics</h2>
             <p>
                 Track how your links are performing across the web with our

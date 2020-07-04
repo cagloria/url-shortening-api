@@ -3,7 +3,7 @@ import logo from "../images/logo.svg";
 
 function Footer() {
     return (
-        <footer>
+        <footer className="section-padding">
             <img src={logo} alt="Shortly logo" />
             <p>Features</p>
             <ul>
