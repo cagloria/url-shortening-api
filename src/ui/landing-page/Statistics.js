@@ -17,7 +17,7 @@ function Statistics() {
                     <div className="stats__icon-wrapper">
                         <img src={iconBrand} alt="Icon of a graph" />
                     </div>
-                    <h3 className="stats__header">Brand Recognition</h3>
+                    <h3>Brand Recognition</h3>
                     <p>
                         Boost your brand recognition with each click. Generic
                         links don’t mean a thing. Branded links help instil
@@ -29,7 +29,7 @@ function Statistics() {
                     <div className="stats__icon-wrapper">
                         <img src={iconRecords} alt="Icon of a speedometer" />
                     </div>
-                    <h3 className="stats__header">Detailed Records</h3>
+                    <h3>Detailed Records</h3>
                     <p>
                         Gain insights into who is clicking your links. Knowing
                         when and where people engage with your content helps
@@ -44,7 +44,7 @@ function Statistics() {
                             alt="Icon of a marker, a pen, and a paintbrush"
                         />
                     </div>
-                    <h3 className="stats__header">Fully Customizable</h3>
+                    <h3>Fully Customizable</h3>
                     <p>
                         Improve brand awareness and content discoverability
                         through customizable links, supercharging audience

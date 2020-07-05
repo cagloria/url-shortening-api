@@ -42,13 +42,12 @@
 }
 
 .form-section {
-  margin-bottom: -52px;
   padding-top: 38px;
+  padding-bottom: 25px;
 }
 
-.url-wrapper {
-  position: relative;
-  top: -118px;
+.url-form-list-wrapper {
+  margin-top: -118px;
 }
 
 .url-form {
@@ -89,7 +88,7 @@
   list-style-type: none;
 }
 
-.url-list__item {
+.url-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,7 +104,7 @@
   background-color: white;
 }
 
-.url-list__item > p {
+.url-list li > p {
   font-size: 0.9em;
   font-weight: 500;
   margin: 0;
@@ -123,9 +122,10 @@
 .url-list__shortened {
   padding-top: 13px;
   padding-bottom: 13px;
+  color: #2acfcf;
 }
 
-.url-list__copy-btn {
+.url-list .button {
   font-size: 0.8em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -138,6 +138,7 @@
 }
 
 .stats-section {
+  padding-top: 25px;
   padding-bottom: 80px;
   text-align: center;
 }
@@ -184,7 +185,6 @@
 }
 
 .stats__icon-wrapper {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +201,7 @@
   background-color: #3b3054;
 }
 
-.stats__header {
+.stats h3 {
   margin-top: 32px;
   margin-bottom: -2px;
 }
@@ -213,6 +213,7 @@
   background-color: #3b3054;
   background-image: url("../../src/images/bg-boost-mobile.svg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 

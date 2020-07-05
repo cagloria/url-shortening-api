@@ -4,7 +4,7 @@ $color-secondary-1: hsl(257, 27%, 26%);
 $color-accent-1: hsl(0, 87%, 67%);
 $color-neutral-1: hsl(0, 0%, 100%);
 $color-neutral-2: hsl(0, 0%, 75%);
-$color-neutral-3: #9e9aa7;
+$color-neutral-3: hsl(258, 7%, 63%);
 $color-neutral-4: hsl(255, 11%, 22%);
 $color-neutral-5: hsl(260, 8%, 14%);
 
@@ -19,8 +19,6 @@ header {
     justify-content: space-between;
     box-sizing: border-box;
     height: 90px;
-    padding-top: 30px;
-    padding-bottom: 10px;
     background-color: $color-neutral-1;
     a,
     .button {

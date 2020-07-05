@@ -1,3 +1,5 @@
+$color-primary-1: hsl(180, 56%, 75%);
+$color-primary-2: hsl(180, 66%, 49%);
 $color-secondary-1: hsl(257, 27%, 26%);
 $color-accent-1: hsl(0, 87%, 67%);
 $color-neutral-1: hsl(0, 0%, 100%);
@@ -45,13 +47,12 @@ $color-neutral-6: hsl(260, 8%, 14%);
 // ********************************************************
 // Form Section
 .form-section {
-    margin-bottom: -52px;
     padding-top: 38px;
+    padding-bottom: 25px;
 }
 
-.url-wrapper {
-    position: relative;
-    top: -118px;
+.url-form-list-wrapper {
+    margin-top: -118px;
 }
 
 .url-form {
@@ -84,7 +85,7 @@ $color-neutral-6: hsl(260, 8%, 14%);
     margin-top: 0;
     padding-left: 0;
     list-style-type: none;
-    &__item {
+    li {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -112,9 +113,10 @@ $color-neutral-6: hsl(260, 8%, 14%);
     &__shortened {
         padding-top: 13px;
         padding-bottom: 13px;
+        color: $color-primary-2;
     }
 
-    &__copy-btn {
+    .button {
         font-size: 0.8em;
         box-sizing: border-box;
         height: 40px;
@@ -129,6 +131,7 @@ $color-neutral-6: hsl(260, 8%, 14%);
 // ********************************************************
 // Statistics Section
 .stats-section {
+    padding-top: 25px;
     padding-bottom: 80px;
     text-align: center;
     h2 {
@@ -163,7 +166,6 @@ $color-neutral-6: hsl(260, 8%, 14%);
     border-radius: 4px;
     background-color: $color-neutral-1;
     &__icon-wrapper {
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -174,7 +176,7 @@ $color-neutral-6: hsl(260, 8%, 14%);
         background-color: $color-secondary-1;
     }
 
-    &__header {
+    h3 {
         margin-top: 32px;
         margin-bottom: -2px;
     }
@@ -186,14 +188,13 @@ $color-neutral-6: hsl(260, 8%, 14%);
     padding-top: 70px;
     padding-bottom: 90px;
     text-align: center;
-
     background-color: $color-secondary-1;
     background-image: url("../../src/images/bg-boost-mobile.svg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     h2 {
         margin-bottom: 16px;
-
         color: $color-neutral-2;
     }
 }

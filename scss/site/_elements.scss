@@ -37,6 +37,10 @@ h3 {
     color: $color-neutral-5;
 }
 
+h4 {
+    color: $color-neutral-2;
+}
+
 // ********************************************************
 // Text
 p,
@@ -52,10 +56,6 @@ a {
     &:hover {
         color: $color-primary-2;
     }
-}
-
-.link-primary {
-    color: $color-primary-2;
 }
 
 // ********************************************************

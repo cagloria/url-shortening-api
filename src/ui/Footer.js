@@ -1,14 +1,20 @@
 import React from "react";
-import logo from "../images/logo.svg";
+import logoWhite from "../images/logo-white.svg";
+import iconFacebook from "../images/icon-facebook.svg";
+import iconTwitter from "../images/icon-twitter.svg";
+import iconPinterest from "../images/icon-pinterest.svg";
+import iconInstagram from "../images/icon-instagram.svg";
 
 function Footer() {
     return (
         <footer className="section-padding">
-            <img src={logo} alt="Shortly logo" />
-            <p>Features</p>
-            <ul>
+            <img src={logoWhite} className="logo" alt="Shortly logo" />
+            <h4>Features</h4>
+            <ul className="footer-nav-list">
                 <li>
-                    <a href="index.html">Link Shortening</a>
+                    <a className="link-neutral-color" href="index.html">
+                        Link Shortening
+                    </a>
                 </li>
                 <li>
                     <a href="index.html">Branded Links</a>
@@ -18,8 +24,8 @@ function Footer() {
                 </li>
             </ul>
 
-            <p>Resources</p>
-            <ul>
+            <h4>Resources</h4>
+            <ul className="footer-nav-list">
                 <li>
                     <a href="index.html">Blog</a>
                 </li>
@@ -31,8 +37,8 @@ function Footer() {
                 </li>
             </ul>
 
-            <p>Company</p>
-            <ul>
+            <h4>Company</h4>
+            <ul className="footer-nav-list">
                 <li>
                     <a href="index.html">About</a>
                 </li>
@@ -44,6 +50,29 @@ function Footer() {
                 </li>
                 <li>
                     <a href="index.html">Contact</a>
+                </li>
+            </ul>
+
+            <ul className="social-list">
+                <li>
+                    <a href="index.html">
+                        <img src={iconFacebook} alt="Facebook" />
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <img src={iconTwitter} alt="Twitter" />
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <img src={iconPinterest} alt="Pinterest" />
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <img src={iconInstagram} alt="Instagram" />
+                    </a>
                 </li>
             </ul>
 

@@ -15,17 +15,10 @@ function URLItem({ jsonObj }) {
     }
 
     return (
-        <li className="url-list__item">
+        <li>
             <p className="url-list__original">{jsonObj.original}</p>
-            <p className="url-list__shortened">
-                <a href={jsonObj.shortened} className=" link-primary">
-                    {jsonObj.shortened}
-                </a>
-            </p>
-            <button
-                onClick={copyToClipboard}
-                className="button url-list__copy-btn"
-            >
+            <p className="url-list__shortened">{jsonObj.shortened}</p>
+            <button onClick={copyToClipboard} className="button">
                 Copy
             </button>
         </li>
@@ -126,7 +119,7 @@ function Form() {
     }
     return (
         <section className="form-section section-padding">
-            <div className="url-wrapper">
+            <div className="url-form-list-wrapper">
                 <URLInput onUrlSubmit={shortenUrl} />
                 <ul className="url-list">{listItems}</ul>
             </div>
