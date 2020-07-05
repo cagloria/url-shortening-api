@@ -202,10 +202,16 @@ nav .button {
   background-image: url("../../src/images/icon-nav-close-blue.svg");
 }
 
-@media screen and (min-width: 550px) {
+@media (min-width: 550px) {
   .nav-list {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: (minmax(auto, 250px))[2];
+        grid-template-columns: repeat(2, minmax(auto, 250px));
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 10px;
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
@@ -220,6 +226,17 @@ nav .button {
     margin: 0;
     padding: 0;
     border: 0;
+  }
+}
+
+@media (max-height: 330px) and (orientation: landscape) {
+  .nav-list {
+    row-gap: 0;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .nav-list a {
+    line-height: 50px;
   }
 }
 

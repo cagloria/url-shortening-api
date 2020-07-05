@@ -100,9 +100,12 @@ nav {
     }
 }
 
-@media screen and (min-width: 550px) {
+@media (min-width: 550px) {
     .nav-list {
-        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        grid-template-columns: repeat(2, minmax(auto, 250px));
+        column-gap: 20px;
+        row-gap: 10px;
         grid-template-rows: repeat(3, auto);
         grid-auto-flow: column;
         .nav-sign-up-li {
@@ -115,5 +118,15 @@ nav {
         margin: 0;
         padding: 0;
         border: 0;
+    }
+}
+
+@media (max-height: 330px) and (orientation: landscape) {
+    .nav-list {
+        row-gap: 0;
+        column-gap: 0;
+        a {
+            line-height: 50px;
+        }
     }
 }

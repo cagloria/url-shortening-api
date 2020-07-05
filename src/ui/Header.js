@@ -12,7 +12,7 @@ function Header() {
     });
 
     $(window).resize(function () {
-        if ($(window).width() >= 768 && navIsOpen) {
+        if ($(window).width() > 768 && navIsOpen) {
             setNavIsOpen(false);
         }
     });
