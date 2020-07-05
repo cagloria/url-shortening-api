@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo.svg";
+import $ from "jquery";
 
 function Header() {
+    function openNav() {
+        $("nav").toggleClass("nav-open");
+        $(".nav-button").toggleClass("nav-button--nav-open");
+    }
+
     return (
         <header className="section-padding">
             <img src={logo} alt="Shortly logo" className="logo" />
@@ -16,14 +22,15 @@ function Header() {
                     <li>
                         <a href="index.html">Resources</a>
                     </li>
+                    <li className="nav-login">
+                        <a href="index.html">Login</a>
+                    </li>
                 </ul>
+
+                <button className="button">Sign Up</button>
             </nav>
 
-            <a href="index.html">Login</a>
-
-            <button className="button">Sign Up</button>
-
-            <button className="nav-button"></button>
+            <button className="nav-button" onClick={openNav}></button>
         </header>
     );
 }
