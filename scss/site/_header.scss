@@ -38,6 +38,7 @@ nav {
     border-radius: 10px;
     background-color: $color-secondary-1;
     .button {
+        font-size: 0.9em;
         width: 100%;
         height: 50px;
     }
@@ -48,9 +49,12 @@ nav {
 }
 
 .nav-list {
+    display: grid;
     margin: 0;
     padding-left: 0;
     list-style-type: none;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
     hr {
         border: 0.1em solid $color-neutral-4;
     }
@@ -61,10 +65,13 @@ nav {
         line-height: 55px;
         display: block;
         color: $color-neutral-2;
+        &:hover {
+            color: $color-primary-2;
+        }
     }
 }
 
-.nav-login {
+.nav-login-li {
     margin-top: 19px;
     padding-top: 17px;
     padding-bottom: 10px;
@@ -90,5 +97,23 @@ nav {
         &:hover {
             background-image: url("../../src/images/icon-nav-close-blue.svg");
         }
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .nav-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: column;
+        .nav-sign-up-li {
+            align-self: center;
+            grid-row: 2 / -1;
+        }
+    }
+
+    .nav-login-li {
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
 }

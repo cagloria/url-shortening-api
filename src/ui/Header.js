@@ -35,12 +35,13 @@ function Header() {
                     <li>
                         <a href="index.html">Resources</a>
                     </li>
-                    <li className="nav-login">
+                    <li className="nav-login-li">
                         <a href="index.html">Login</a>
                     </li>
+                    <li className="nav-sign-up-li">
+                        <button className="button">Sign Up</button>
+                    </li>
                 </ul>
-
-                <button className="button">Sign Up</button>
             </nav>
 
             <button
