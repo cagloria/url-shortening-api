@@ -3,15 +3,28 @@ import logo from "../images/logo.svg";
 import $ from "jquery";
 
 function Header() {
-    function openNav() {
-        $("nav").toggleClass("nav-open");
-        $(".nav-button").toggleClass("nav-button--nav-open");
+    const [navIsOpen, setNavIsOpen] = useState(false);
+
+    $("main, footer").click(function () {
+        if (navIsOpen) {
+            setNavIsOpen(false);
+        }
+    });
+
+    $(window).resize(function () {
+        if ($(window).width() >= 768 && navIsOpen) {
+            setNavIsOpen(false);
+        }
+    });
+
+    function toggleNav() {
+        setNavIsOpen(!navIsOpen);
     }
 
     return (
         <header className="section-padding">
             <img src={logo} alt="Shortly logo" className="logo" />
-            <nav>
+            <nav className={navIsOpen ? "nav-open" : ""}>
                 <ul className="nav-list">
                     <li>
                         <a href="index.html">Features</a>
@@ -30,7 +43,12 @@ function Header() {
                 <button className="button">Sign Up</button>
             </nav>
 
-            <button className="nav-button" onClick={openNav}></button>
+            <button
+                className={
+                    "nav-button" + (navIsOpen ? " nav-button--nav-open" : "")
+                }
+                onClick={toggleNav}
+            ></button>
         </header>
     );
 }

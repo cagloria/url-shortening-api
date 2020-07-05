@@ -121,10 +121,10 @@ nav {
           box-sizing: border-box;
   width: 87%;
   padding: 27px 25px 40px;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   -webkit-transform: translate(-50%, -200vh);
           transform: translate(-50%, -200vh);
   text-align: center;
@@ -181,10 +181,15 @@ nav .button {
 
 .nav-button:hover {
   cursor: pointer;
+  background-image: url("../../src/images/icon-nav-open-blue.svg");
 }
 
 .nav-button--nav-open {
   background-image: url("../../src/images/icon-nav-close.svg");
+}
+
+.nav-button--nav-open:hover {
+  background-image: url("../../src/images/icon-nav-close-blue.svg");
 }
 
 footer {

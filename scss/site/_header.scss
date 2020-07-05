@@ -32,7 +32,7 @@ nav {
     box-sizing: border-box;
     width: 87%;
     padding: 27px 25px 40px;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     transform: translate(-50%, -200vh);
     text-align: center;
     border-radius: 10px;
@@ -83,8 +83,12 @@ nav {
     background-size: contain;
     &:hover {
         cursor: pointer;
+        background-image: url("../../src/images/icon-nav-open-blue.svg");
     }
     &--nav-open {
         background-image: url("../../src/images/icon-nav-close.svg");
+        &:hover {
+            background-image: url("../../src/images/icon-nav-close-blue.svg");
+        }
     }
 }
