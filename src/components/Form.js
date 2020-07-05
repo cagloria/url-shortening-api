@@ -35,6 +35,7 @@ function URLItem({ jsonObj }) {
 function URLInput({ onUrlSubmit }) {
     const [input, setInput] = useState("");
     const [error, setError] = useState("");
+    // const [error, setError] = useState("Placeholder error"); // TODO: Delete after testing
 
     function handleChange(event) {
         setInput(event.target.value);
@@ -107,7 +108,7 @@ function Form() {
     //         original: "https://fonts.google.com/",
     //         shortened: "https://fonts.google.com/",
     //     },
-    // ]);
+    // ]); // TODO: Delete after testing
 
     const listItems = urlList.map((url) => (
         <URLItem jsonObj={url} key={url.id} />
