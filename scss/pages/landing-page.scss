@@ -129,9 +129,8 @@ $color-neutral-6: hsl(260, 8%, 14%);
 // ********************************************************
 // Statistics Section
 .stats-section {
-    padding-bottom: 55px;
+    padding-bottom: 80px;
     text-align: center;
-
     h2 {
         margin-bottom: 18px;
     }
@@ -184,5 +183,17 @@ $color-neutral-6: hsl(260, 8%, 14%);
 // ********************************************************
 // Final Section
 .final-section {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    text-align: center;
+
     background-color: $color-secondary-1;
+    background-image: url("../../src/images/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2 {
+        margin-bottom: 16px;
+
+        color: $color-neutral-2;
+    }
 }

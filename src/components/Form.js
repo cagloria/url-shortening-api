@@ -34,8 +34,8 @@ function URLItem({ jsonObj }) {
 
 function URLInput({ onUrlSubmit }) {
     const [input, setInput] = useState("");
-    const [error, setError] = useState("");
-    // const [error, setError] = useState("Placeholder error"); // TODO: Delete after testing
+    // const [error, setError] = useState("");
+    const [error, setError] = useState("Placeholder error"); // TODO: Delete after testing
 
     function handleChange(event) {
         setInput(event.target.value);
@@ -91,24 +91,24 @@ function URLInput({ onUrlSubmit }) {
 
 function Form() {
     const [newId, updateId] = useState(1);
-    const [urlList, setUrlList] = useState([]);
-    // const [urlList, setUrlList] = useState([
-    //     {
-    //         id: 1,
-    //         original: "https://fonts.google.com/",
-    //         shortened: "https://fonts.google.com/",
-    //     },
-    //     {
-    //         id: 2,
-    //         original: "https://fonts.google.com/",
-    //         shortened: "https://fonts.google.com/",
-    //     },
-    //     {
-    //         id: 3,
-    //         original: "https://fonts.google.com/",
-    //         shortened: "https://fonts.google.com/",
-    //     },
-    // ]); // TODO: Delete after testing
+    // const [urlList, setUrlList] = useState([]);
+    const [urlList, setUrlList] = useState([
+        {
+            id: 1,
+            original: "https://fonts.google.com/",
+            shortened: "https://fonts.google.com/",
+        },
+        {
+            id: 2,
+            original: "https://fonts.google.com/",
+            shortened: "https://fonts.google.com/",
+        },
+        {
+            id: 3,
+            original: "https://fonts.google.com/",
+            shortened: "https://fonts.google.com/",
+        },
+    ]); // TODO: Delete after testing
 
     const listItems = urlList.map((url) => (
         <URLItem jsonObj={url} key={url.id} />
