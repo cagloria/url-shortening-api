@@ -127,6 +127,7 @@ nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 87%;
+  max-width: 430px;
   padding: 27px 25px 40px;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
@@ -139,9 +140,10 @@ nav {
   background-color: #3b3054;
 }
 
-nav .button {
+.nav-sign-up-li .button {
   font-size: 0.9em;
   width: 100%;
+  max-width: 250px;
   height: 50px;
 }
 
@@ -225,18 +227,17 @@ nav .button {
             justify-content: center;
     -ms-grid-columns: (minmax(auto, 250px))[2];
         grid-template-columns: repeat(2, minmax(auto, 250px));
-    -webkit-column-gap: 20px;
-            column-gap: 20px;
-    row-gap: 10px;
+    gap: 20px;
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
-    grid-auto-flow: column;
+    grid-auto-flow: row;
   }
-  .nav-list .nav-sign-up-li {
+  .nav-sign-up-li {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    grid-row: 2 / -1;
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
   }
   .nav-login-li {
     margin: 0;

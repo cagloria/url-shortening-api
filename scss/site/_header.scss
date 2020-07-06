@@ -31,15 +31,20 @@ nav {
     left: 50%;
     box-sizing: border-box;
     width: 87%;
+    max-width: 430px;
     padding: 27px 25px 40px;
     transition: transform 0.5s ease-in-out;
     transform: translate(-50%, -200vh);
     text-align: center;
     border-radius: 10px;
     background-color: $color-secondary-1;
+}
+
+.nav-sign-up-li {
     .button {
         font-size: 0.9em;
         width: 100%;
+        max-width: 250px;
         height: 50px;
     }
 }
@@ -114,14 +119,15 @@ nav {
     .nav-list {
         justify-content: center;
         grid-template-columns: repeat(2, minmax(auto, 250px));
-        column-gap: 20px;
-        row-gap: 10px;
+        gap: 20px;
         grid-template-rows: repeat(3, auto);
-        grid-auto-flow: column;
-        .nav-sign-up-li {
-            align-self: center;
-            grid-row: 2 / -1;
-        }
+        grid-auto-flow: row;
+    }
+
+    .nav-sign-up-li {
+        align-self: center;
+        grid-row: 3 / -1;
+        grid-column: 1 / -1;
     }
 
     .nav-login-li {
