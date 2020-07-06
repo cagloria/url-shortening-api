@@ -9,49 +9,58 @@ function Footer() {
     return (
         <footer className="section-padding">
             <img src={logoWhite} className="logo" alt="Shortly logo" />
-            <h4>Features</h4>
-            <ul className="footer-nav-list">
-                <li>
-                    <a className="link-neutral-color" href="index.html">
-                        Link Shortening
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">Branded Links</a>
-                </li>
-                <li>
-                    <a href="index.html">Analytics</a>
-                </li>
-            </ul>
 
-            <h4>Resources</h4>
-            <ul className="footer-nav-list">
-                <li>
-                    <a href="index.html">Blog</a>
-                </li>
-                <li>
-                    <a href="index.html">Developers</a>
-                </li>
-                <li>
-                    <a href="index.html">Support</a>
-                </li>
-            </ul>
+            <div className="footer-links-grid">
+                <div className="footer-links-grid__category">
+                    <h4>Features</h4>
+                    <ul className="footer-nav-list">
+                        <li>
+                            <a className="link-neutral-color" href="index.html">
+                                Link Shortening
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html">Branded Links</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Analytics</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <h4>Company</h4>
-            <ul className="footer-nav-list">
-                <li>
-                    <a href="index.html">About</a>
-                </li>
-                <li>
-                    <a href="index.html">Our Team</a>
-                </li>
-                <li>
-                    <a href="index.html">Careers</a>
-                </li>
-                <li>
-                    <a href="index.html">Contact</a>
-                </li>
-            </ul>
+                <div className="footer-links-grid__category">
+                    <h4>Resources</h4>
+                    <ul className="footer-nav-list">
+                        <li>
+                            <a href="index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Developers</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Support</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="footer-links-grid__category">
+                    <h4>Company</h4>
+                    <ul className="footer-nav-list">
+                        <li>
+                            <a href="index.html">About</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Our Team</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Careers</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <ul className="social-list">
                 <li>

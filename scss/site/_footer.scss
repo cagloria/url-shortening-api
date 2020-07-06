@@ -34,6 +34,12 @@ footer {
     }
 }
 
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
 .footer-nav-list {
     font-size: 0.825em;
     margin: 0;
@@ -67,5 +73,12 @@ footer {
                     hue-rotate(130deg);
             }
         }
+    }
+}
+
+@media (min-width: 550px) {
+    .footer-links-grid {
+        grid-template-columns: repeat(3, minmax(auto, 200px));
+        grid-template-rows: auto;
     }
 }

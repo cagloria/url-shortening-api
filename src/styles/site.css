@@ -293,6 +293,15 @@ footer p {
   font-size: 0.825em;
 }
 
+.footer-links-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+}
+
 .footer-nav-list {
   font-size: 0.825em;
   margin: 0;
@@ -335,4 +344,13 @@ footer p {
 .social-list li a:hover {
   -webkit-filter: brightness(60%) sepia(100%) saturate(310%) hue-rotate(130deg);
           filter: brightness(60%) sepia(100%) saturate(310%) hue-rotate(130deg);
+}
+
+@media (min-width: 550px) {
+  .footer-links-grid {
+    -ms-grid-columns: (minmax(auto, 200px))[3];
+        grid-template-columns: repeat(3, minmax(auto, 200px));
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
 }
