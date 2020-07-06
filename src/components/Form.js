@@ -73,11 +73,7 @@ function URLInput({ onUrlSubmit }) {
             <p className="url-form__error-message">
                 {error.length > 0 ? error : null}
             </p>
-            <input
-                type="submit"
-                value="Shorten It!"
-                className="button url-form__submit-btn"
-            />
+            <input type="submit" value="Shorten It!" className="button" />
         </form>
     );
 }
