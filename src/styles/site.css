@@ -4,6 +4,13 @@
   padding-left: 24px;
 }
 
+@media (min-width: 426px) {
+  .section-padding {
+    padding-right: 6vw;
+    padding-left: 6vw;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -202,6 +209,15 @@ nav .button {
   background-image: url("../../src/images/icon-nav-close-blue.svg");
 }
 
+@media (min-width: 426px) {
+  header {
+    height: 100px;
+  }
+  nav {
+    top: 106px;
+  }
+}
+
 @media (min-width: 550px) {
   .nav-list {
     -webkit-box-pack: center;
@@ -230,6 +246,9 @@ nav .button {
 }
 
 @media (max-height: 330px) and (orientation: landscape) {
+  nav {
+    padding-bottom: 27px;
+  }
   .nav-list {
     row-gap: 0;
     -webkit-column-gap: 0;

@@ -100,6 +100,16 @@ nav {
     }
 }
 
+@media (min-width: 426px) {
+    header {
+        height: 100px;
+    }
+
+    nav {
+        top: 106px;
+    }
+}
+
 @media (min-width: 550px) {
     .nav-list {
         justify-content: center;
@@ -122,6 +132,10 @@ nav {
 }
 
 @media (max-height: 330px) and (orientation: landscape) {
+    nav {
+        padding-bottom: 27px;
+    }
+
     .nav-list {
         row-gap: 0;
         column-gap: 0;
