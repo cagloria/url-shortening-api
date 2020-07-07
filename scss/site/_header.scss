@@ -150,3 +150,10 @@ nav {
         }
     }
 }
+
+@media (min-width: 769px) {
+    header {
+        position: static;
+        height: 144px;
+    }
+}

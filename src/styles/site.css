@@ -6,8 +6,8 @@
 
 @media (min-width: 426px) {
   .section-padding {
-    padding-right: 11vw;
-    padding-left: 11vw;
+    padding-right: 11.5vw;
+    padding-left: 11.5vw;
   }
 }
 
@@ -257,6 +257,13 @@ nav {
   }
   .nav-list a {
     line-height: 50px;
+  }
+}
+
+@media (min-width: 769px) {
+  header {
+    position: static;
+    height: 144px;
   }
 }
 
