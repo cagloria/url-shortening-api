@@ -7,6 +7,7 @@ $color-neutral-2: hsl(0, 0%, 75%);
 $color-neutral-3: hsl(258, 7%, 63%);
 $color-neutral-4: hsl(255, 11%, 22%);
 $color-neutral-5: hsl(260, 8%, 14%);
+$breakpoint-tablet-550: 550px;
 
 footer {
     display: flex;
@@ -38,6 +39,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
+    @media (min-width: $breakpoint-tablet-550) {
+        grid-template-columns: repeat(3, minmax(auto, 200px));
+        grid-template-rows: auto;
+    }
 }
 
 .footer-nav-list {
@@ -73,12 +78,5 @@ footer {
                     hue-rotate(130deg);
             }
         }
-    }
-}
-
-@media (min-width: 550px) {
-    .footer-links-grid {
-        grid-template-columns: repeat(3, minmax(auto, 200px));
-        grid-template-rows: auto;
     }
 }

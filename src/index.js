@@ -7,7 +7,7 @@ import Statistics from "./ui/landing-page/Statistics.js";
 import Final from "./ui/landing-page/Final.js";
 import Footer from "./ui/Footer.js";
 import "./styles/site.css";
-import "./styles/landing-page.css";
+import "./styles/landing.css";
 
 function LandingPage() {
     return (

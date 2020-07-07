@@ -11,6 +11,8 @@ $color-neutral-4: hsl(257, 7%, 63%);
 $color-neutral-5: hsl(255, 11%, 22%);
 $color-neutral-6: hsl(260, 8%, 14%);
 $font-family: "Poppins", sans-serif;
+$breakpoint-desktop-769: 769px;
+$breakpoint-desktop-1025: 1025px;
 
 body {
     font-family: $font-family;
@@ -24,6 +26,17 @@ h1 {
     font-size: 2.5em;
     line-height: 46px;
     color: $color-neutral-5;
+    @media (min-width: $breakpoint-desktop-769) {
+        font-size: 3.5em;
+        line-height: 62px;
+        letter-spacing: -1px;
+    }
+
+    @media (min-width: $breakpoint-desktop-1025) {
+        font-size: 5.2em;
+        line-height: 90px;
+        letter-spacing: -4px;
+    }
 }
 
 h2 {

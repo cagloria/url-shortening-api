@@ -1,10 +1,9 @@
+$breakpoint-tablet-426: 426px;
+
 .section-padding {
     padding-right: 24px;
     padding-left: 24px;
-}
-
-@media (min-width: 426px) {
-    .section-padding {
+    @media (min-width: $breakpoint-tablet-426) {
         padding-right: 11.5vw;
         padding-left: 11.5vw;
     }
