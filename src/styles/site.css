@@ -56,6 +56,8 @@ a:hover {
   font-family: "Poppins", sans-serif;
   font-size: 1.125em;
   font-weight: 700;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 56px;
   padding-right: 41px;
   padding-left: 41px;
@@ -140,7 +142,7 @@ nav {
   background-color: #3b3054;
 }
 
-.nav-sign-up-li .button {
+.nav-list__sign-up-li .button {
   font-size: 0.9em;
   width: 100%;
   max-width: 250px;
@@ -163,10 +165,6 @@ nav {
   grid-auto-rows: auto;
 }
 
-.nav-list hr {
-  border: 0.1em solid #9e9aa7;
-}
-
 .nav-list a {
   font-size: 1em;
   font-weight: 700;
@@ -179,7 +177,7 @@ nav {
   color: #2acfcf;
 }
 
-.nav-login-li {
+.nav-list__login-li {
   margin-top: 19px;
   padding-top: 17px;
   padding-bottom: 10px;
@@ -232,14 +230,14 @@ nav {
         grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
   }
-  .nav-sign-up-li {
+  .nav-list__sign-up-li {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     grid-row: 3 / -1;
     grid-column: 1 / -1;
   }
-  .nav-login-li {
+  .nav-list__login-li {
     margin: 0;
     padding: 0;
     border: 0;
@@ -264,6 +262,49 @@ nav {
   header {
     position: static;
     height: 144px;
+  }
+  nav {
+    position: static;
+    max-width: none;
+    margin-left: 30px;
+    padding: 0;
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none;
+            transform: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .nav-button {
+    display: none;
+  }
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-list__link-li {
+    width: 100px;
+  }
+  .nav-list__link-li:nth-child(3) {
+    margin-right: auto;
+  }
+  .nav-list__link-li:nth-child(4) {
+    margin-left: auto;
+  }
+  .nav-list__sign-up-li .button {
+    font-size: 0.8em;
+    width: 105px;
+    height: 45px;
+    padding: 0;
+  }
+  .nav-list a {
+    font-size: 0.8em;
+    display: inline;
+    color: #9e9aa7;
+  }
+  .nav-list a:hover {
+    color: #232127;
   }
 }
 

@@ -26,19 +26,19 @@ function Header() {
             <img src={logo} alt="Shortly logo" className="logo" />
             <nav className={navIsOpen ? "nav-open" : ""}>
                 <ul className="nav-list">
-                    <li>
+                    <li className="nav-list__link-li">
                         <a href="index.html">Features</a>
                     </li>
-                    <li>
+                    <li className="nav-list__link-li">
                         <a href="index.html">Pricing</a>
                     </li>
-                    <li>
+                    <li className="nav-list__link-li">
                         <a href="index.html">Resources</a>
                     </li>
-                    <li className="nav-login-li">
+                    <li className="nav-list__login-li nav-list__link-li">
                         <a href="index.html">Login</a>
                     </li>
-                    <li className="nav-sign-up-li">
+                    <li className="nav-list__sign-up-li">
                         <button className="button">Sign Up</button>
                     </li>
                 </ul>
