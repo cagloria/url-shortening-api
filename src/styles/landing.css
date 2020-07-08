@@ -140,8 +140,8 @@
     padding-bottom: 19px;
     -webkit-column-gap: 24px;
             column-gap: 24px;
-    -ms-grid-columns: 1fr auto;
-        grid-template-columns: 1fr auto;
+    -ms-grid-columns: 1fr 130px;
+        grid-template-columns: 1fr 130px;
     -ms-grid-rows: auto 22px;
         grid-template-rows: auto 22px;
   }
@@ -168,17 +168,17 @@
         grid-template-columns: 1fr 188px;
   }
   .url-form__error-message {
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-top: 6px;
   }
   .url-form .button {
+    font-size: 1.2em;
     height: 64px;
   }
 }
 
 @media (min-width: 1025px) {
   .url-form {
-    font-size: 1.2em;
     padding: 52px 65px 30px;
   }
 }
@@ -238,11 +238,10 @@
   font-size: 0.8em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: calc(100% - 30px);
   height: 40px;
   margin-right: 15px;
   margin-left: 15px;
-  padding-right: 25px;
-  padding-left: 25px;
   border-radius: 10px;
 }
 
@@ -296,6 +295,9 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 13px 8px 10px 16px;
+  }
+  .url-list .button {
+    font-size: 0.6em;
   }
 }
 

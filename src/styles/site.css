@@ -89,9 +89,8 @@ a:hover {
   font-weight: 700;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 200px;
   height: 56px;
-  padding-right: 41px;
-  padding-left: 41px;
   letter-spacing: 1px;
   color: white;
   border: 0;
@@ -145,7 +144,7 @@ a:hover {
 
 @media (min-width: 769px) {
   .input-field {
-    font-size: 1.1em;
+    font-size: 1.3em;
     height: 64px;
     padding-right: 28px;
     padding-left: 28px;

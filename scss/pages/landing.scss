@@ -135,7 +135,7 @@ $breakpoint-desktop-1025: 1025px;
         display: grid;
         padding-bottom: 19px;
         column-gap: 24px;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 130px;
         grid-template-rows: auto 22px;
         &__error-message {
             margin-bottom: 0;
@@ -154,17 +154,17 @@ $breakpoint-desktop-1025: 1025px;
         background-image: url("../../src/images/bg-shorten-desktop.svg");
         grid-template-columns: 1fr 188px;
         &__error-message {
-            font-size: 0.8em;
+            font-size: 0.9em;
             margin-top: 6px;
         }
 
         .button {
+            font-size: 1.2em;
             height: 64px;
         }
     }
 
     @media (min-width: $breakpoint-desktop-1025) {
-        font-size: 1.2em;
         padding: 52px 65px 30px;
     }
 }
@@ -210,11 +210,10 @@ $breakpoint-desktop-1025: 1025px;
     .button {
         font-size: 0.8em;
         box-sizing: border-box;
+        width: calc(100% - 30px);
         height: 40px;
         margin-right: 15px;
         margin-left: 15px;
-        padding-right: 25px;
-        padding-left: 25px;
         border-radius: 10px;
     }
 
@@ -257,6 +256,10 @@ $breakpoint-desktop-1025: 1025px;
             font-size: 1.4em;
             box-sizing: border-box;
             padding: 13px 8px 10px 16px;
+        }
+
+        .button {
+            font-size: 0.6em;
         }
     }
 
