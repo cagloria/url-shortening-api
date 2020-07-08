@@ -12,8 +12,8 @@ function Statistics() {
                 advanced statistics dashboard.
             </p>
 
-            <div className="stats-container">
-                <div className="stats">
+            <div className="stats">
+                <div className="stats__category">
                     <div className="stats__icon-wrapper">
                         <img src={iconBrand} alt="Icon of a graph" />
                     </div>
@@ -25,7 +25,7 @@ function Statistics() {
                     </p>
                 </div>
 
-                <div className="stats">
+                <div className="stats__category">
                     <div className="stats__icon-wrapper">
                         <img src={iconRecords} alt="Icon of a speedometer" />
                     </div>
@@ -37,7 +37,7 @@ function Statistics() {
                     </p>
                 </div>
 
-                <div className="stats">
+                <div className="stats__category">
                     <div className="stats__icon-wrapper">
                         <img
                             src={iconCustom}
