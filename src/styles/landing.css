@@ -464,3 +464,14 @@
   margin-bottom: 16px;
   color: #eff0f5;
 }
+
+@media (min-width: 769px) {
+  .final-section {
+    padding-top: 20px;
+    padding-bottom: 56px;
+    background-image: url("../../src/images/bg-boost-desktop.svg");
+  }
+  .final-section h2 {
+    margin-bottom: 25px;
+  }
+}
