@@ -8,6 +8,7 @@ $color-neutral-3: hsl(258, 7%, 63%);
 $color-neutral-4: hsl(255, 11%, 22%);
 $color-neutral-5: hsl(260, 8%, 14%);
 $breakpoint-tablet-550: 550px;
+$breakpoint-desktop-769: 769px;
 
 footer {
     display: flex;
@@ -21,10 +22,6 @@ footer {
         margin-bottom: 25px;
     }
 
-    h4 {
-        margin-bottom: 20px;
-    }
-
     a {
         font-weight: 500;
         color: $color-neutral-2;
@@ -33,15 +30,56 @@ footer {
     p {
         font-size: 0.825em;
     }
+
+    @media (min-width: $breakpoint-desktop-1025) {
+        display: grid;
+        padding-top: 71px;
+        padding-bottom: 47px;
+        grid-template-columns: 2.7fr minmax(450px, 4fr) 1fr;
+        grid-template-rows: repeat(2, auto);
+        .logo {
+            align-self: start;
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        > p {
+            grid-row: 2;
+            grid-column: 1 / -1;
+        }
+    }
 }
 
 .footer-links-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
+    margin-bottom: 6px;
+
+    h4 {
+        margin-bottom: 24px;
+    }
+
+    &__category:not(:last-child) {
+        margin-bottom: 39px;
+    }
+
     @media (min-width: $breakpoint-tablet-550) {
-        grid-template-columns: repeat(3, minmax(auto, 200px));
-        grid-template-rows: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 500px;
+        &__category {
+            flex: 1;
+            margin: 0;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop-1025) {
+        max-width: unset;
+        text-align: left;
+        grid-row: 1;
+        grid-column: 2;
+        h4 {
+            margin-top: 0;
+        }
     }
 }
 
@@ -78,5 +116,13 @@ footer {
                     hue-rotate(130deg);
             }
         }
+    }
+
+    @media (min-width: $breakpoint-desktop-1025) {
+        align-self: start;
+        margin: 0;
+        grid-row: 1;
+        justify-self: end;
+        grid-column: 3;
     }
 }
