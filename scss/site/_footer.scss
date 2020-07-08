@@ -50,15 +50,28 @@ footer {
     }
 }
 
-.footer-links-grid {
+.footer-nav {
     margin-bottom: 6px;
 
-    h4 {
-        margin-bottom: 24px;
+    &__category {
+        h4 {
+            margin-bottom: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 39px;
+        }
     }
 
-    &__category:not(:last-child) {
-        margin-bottom: 39px;
+    &__ul {
+        font-size: 0.825em;
+        margin: 0;
+        margin-bottom: 12px;
+        padding-left: 0;
+        list-style-type: none;
+        li {
+            margin-bottom: 10px;
+        }
     }
 
     @media (min-width: $breakpoint-tablet-550) {
@@ -77,20 +90,11 @@ footer {
         text-align: left;
         grid-row: 1;
         grid-column: 2;
-        h4 {
-            margin-top: 0;
+        &__category {
+            h4 {
+                margin-top: 0;
+            }
         }
-    }
-}
-
-.footer-nav-list {
-    font-size: 0.825em;
-    margin: 0;
-    margin-bottom: 12px;
-    padding-left: 0;
-    list-style-type: none;
-    li {
-        margin-bottom: 10px;
     }
 }
 

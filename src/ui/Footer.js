@@ -10,10 +10,10 @@ function Footer() {
         <footer className="section-padding">
             <img src={logoWhite} className="logo" alt="Shortly logo" />
 
-            <div className="footer-links-grid">
-                <div className="footer-links-grid__category">
+            <div className="footer-nav">
+                <div className="footer-nav__category">
                     <h4>Features</h4>
-                    <ul className="footer-nav-list">
+                    <ul className="footer-nav__ul">
                         <li>
                             <a className="link-neutral-color" href="index.html">
                                 Link Shortening
@@ -28,9 +28,9 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className="footer-links-grid__category">
+                <div className="footer-nav__category">
                     <h4>Resources</h4>
-                    <ul className="footer-nav-list">
+                    <ul className="footer-nav__ul">
                         <li>
                             <a href="index.html">Blog</a>
                         </li>
@@ -43,9 +43,9 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className="footer-links-grid__category">
+                <div className="footer-nav__category">
                     <h4>Company</h4>
-                    <ul className="footer-nav-list">
+                    <ul className="footer-nav__ul">
                         <li>
                             <a href="index.html">About</a>
                         </li>
