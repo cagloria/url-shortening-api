@@ -43,6 +43,10 @@ h2 {
     font-size: 1.8em;
     letter-spacing: -1px;
     color: $color-neutral-5;
+
+    @media (min-width: $breakpoint-desktop-769) {
+        font-size: 2.5em;
+    }
 }
 
 h3 {

@@ -60,6 +60,12 @@ h2 {
   color: #35323e;
 }
 
+@media (min-width: 769px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
 h3 {
   font-size: 1.37em;
   color: #35323e;
