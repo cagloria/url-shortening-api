@@ -92,6 +92,8 @@ a {
     }
 }
 
+// FIXME: Remove button padding
+
 // ********************************************************
 // Forms
 .input-field {
@@ -108,10 +110,17 @@ a {
     border-radius: 4px;
     &--invalid {
         border-color: $color-accent-1;
-        &:placeholder {
+        &::placeholder {
             opacity: 0.5;
             color: $color-accent-1;
         }
+    }
+
+    @media (min-width: $breakpoint-desktop-769) {
+        font-size: 1.1em;
+        height: 64px;
+        padding-right: 28px;
+        padding-left: 28px;
     }
 }
 

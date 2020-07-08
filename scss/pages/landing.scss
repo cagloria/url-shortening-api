@@ -12,7 +12,7 @@ $breakpoint-tablet-426: 426px;
 $breakpoint-tablet-550: 550px;
 $breakpoint-tablet-650: 650px;
 $breakpoint-desktop-769: 769px;
-$breakpoint-desktop-1025: 769px;
+$breakpoint-desktop-1025: 1025px;
 
 // ********************************************************
 // Intro Section
@@ -52,6 +52,7 @@ $breakpoint-desktop-1025: 769px;
         position: relative;
         z-index: -1;
         align-items: flex-start;
+        padding-bottom: 222px;
         text-align: left;
         > *:not(img) {
             max-width: 600px;
@@ -146,6 +147,25 @@ $breakpoint-desktop-1025: 769px;
             grid-row: 1;
             grid-column: 2;
         }
+    }
+
+    @media (min-width: $breakpoint-desktop-769) {
+        padding: 38px 44px 24px;
+        background-image: url("../../src/images/bg-shorten-desktop.svg");
+        grid-template-columns: 1fr 188px;
+        &__error-message {
+            font-size: 0.8em;
+            margin-top: 6px;
+        }
+
+        .button {
+            height: 64px;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop-1025) {
+        font-size: 1.2em;
+        padding: 52px 65px 30px;
     }
 }
 

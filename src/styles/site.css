@@ -123,9 +123,33 @@ a:hover {
   border-color: #f46262;
 }
 
-.input-field--invalid:placeholder {
+.input-field--invalid::-webkit-input-placeholder {
   opacity: 0.5;
   color: #f46262;
+}
+
+.input-field--invalid:-ms-input-placeholder {
+  opacity: 0.5;
+  color: #f46262;
+}
+
+.input-field--invalid::-ms-input-placeholder {
+  opacity: 0.5;
+  color: #f46262;
+}
+
+.input-field--invalid::placeholder {
+  opacity: 0.5;
+  color: #f46262;
+}
+
+@media (min-width: 769px) {
+  .input-field {
+    font-size: 1.1em;
+    height: 64px;
+    padding-right: 28px;
+    padding-left: 28px;
+  }
 }
 
 .logo {
