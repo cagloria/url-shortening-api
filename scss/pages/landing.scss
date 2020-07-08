@@ -51,10 +51,17 @@ $breakpoint-desktop-1025: 769px;
     @media (min-width: $breakpoint-desktop-769) {
         position: relative;
         z-index: -1;
-        overflow: hidden;
         align-items: flex-start;
-        padding-right: 46vw;
         text-align: left;
+        > *:not(img) {
+            max-width: 600px;
+        }
+
+        > h1,
+        > p {
+            width: 40vw;
+        }
+
         img {
             position: absolute;
             top: 25px;

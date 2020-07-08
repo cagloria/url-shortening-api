@@ -11,7 +11,8 @@ $color-neutral-6: hsl(260, 8%, 14%);
 $breakpoint-phone-landscape-330: 330px;
 $breakpoint-tablet-426: 426px;
 $breakpoint-tablet-550: 550px;
-$breakpoint-phone-769: 769px;
+$breakpoint-desktop-769: 769px;
+$breakpoint-desktop-1025: 1025px;
 
 // ********************************************************
 // Header
@@ -29,7 +30,7 @@ header {
         height: 100px;
     }
 
-    @media (min-width: $breakpoint-phone-769) {
+    @media (min-width: $breakpoint-desktop-769) {
         position: static;
         height: 144px;
     }
@@ -58,7 +59,7 @@ nav {
         top: 106px;
     }
 
-    @media (min-width: $breakpoint-phone-769) {
+    @media (min-width: $breakpoint-desktop-769) {
         position: static;
         max-width: none;
         margin-left: 30px;
@@ -67,6 +68,10 @@ nav {
         transform: none;
         border-radius: 0;
         background-color: transparent;
+    }
+
+    @media (min-width: $breakpoint-desktop-1025) {
+        margin-left: 30px;
     }
 }
 
@@ -81,7 +86,6 @@ nav {
     list-style-type: none;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    // TODO: Organize nav-list CSS
     a {
         font-size: 1em;
         font-weight: 700;
@@ -91,12 +95,55 @@ nav {
         &:hover {
             color: $color-primary-2;
         }
+    }
 
-        @media (max-height: 330px) and (orientation: landscape) {
-            line-height: 50px;
+    &__login-li {
+        margin-top: 19px;
+        padding-top: 17px;
+        padding-bottom: 10px;
+        border-top: 1px solid $color-neutral-4;
+    }
+
+    &__sign-up-li {
+        .button {
+            font-size: 0.9em;
+            width: 100%;
+            max-width: 250px;
+            height: 50px;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet-550) {
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: row;
+        &__login-li {
+            margin: 0;
+            padding: 0;
+            border: 0;
         }
 
-        @media (min-width: $breakpoint-phone-769) {
+        &__sign-up-li {
+            align-self: center;
+            grid-row: 3 / -1;
+            grid-column: 1 / -1;
+        }
+    }
+
+    @media (max-height: $breakpoint-phone-landscape-330) and (orientation: landscape) {
+        row-gap: 10px;
+
+        a {
+            line-height: 45px;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop-769) {
+        display: flex;
+
+        a {
             font-size: 0.8em;
             display: inline;
             color: $color-neutral-4;
@@ -104,11 +151,9 @@ nav {
                 color: $color-neutral-6;
             }
         }
-    }
 
-    &__link-li {
-        @media (min-width: $breakpoint-phone-769) {
-            width: 100px;
+        &__link-li {
+            width: 85px;
 
             &:nth-child(3) {
                 margin-right: auto;
@@ -118,33 +163,9 @@ nav {
                 margin-left: auto;
             }
         }
-    }
 
-    &__login-li {
-        margin-top: 19px;
-        padding-top: 17px;
-        padding-bottom: 10px;
-        border-top: 1px solid $color-neutral-4;
-        @media (min-width: $breakpoint-tablet-550) {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
-    }
-
-    &__sign-up-li {
-        @media (min-width: $breakpoint-tablet-550) {
-            align-self: center;
-            grid-row: 3 / -1;
-            grid-column: 1 / -1;
-        }
-
-        .button {
-            font-size: 0.9em;
-            width: 100%;
-            max-width: 250px;
-            height: 50px;
-            @media (min-width: $breakpoint-phone-769) {
+        &__sign-up-li {
+            .button {
                 font-size: 0.8em;
                 width: 105px;
                 height: 45px;
@@ -153,24 +174,10 @@ nav {
         }
     }
 
-    @media (min-width: $breakpoint-tablet-550) {
-        justify-content: center;
-        grid-template-columns: repeat(2, minmax(auto, 250px));
-
-        // FIXME: nav-list columns are not equal on tablet
-        // FIXME: nav-list exceeding padding on nav
-        gap: 20px;
-        grid-template-rows: repeat(3, auto);
-        grid-auto-flow: row;
-    }
-
-    @media (max-height: $breakpoint-phone-landscape-330) and (orientation: landscape) {
-        row-gap: 0;
-        column-gap: 0;
-    }
-
-    @media (min-width: $breakpoint-phone-769) {
-        display: flex;
+    @media (min-width: $breakpoint-desktop-1025) {
+        &__link-li {
+            width: 95px;
+        }
     }
 }
 
@@ -195,7 +202,7 @@ nav {
         }
     }
 
-    @media (min-width: $breakpoint-phone-769) {
+    @media (min-width: $breakpoint-desktop-769) {
         display: none;
     }
 }

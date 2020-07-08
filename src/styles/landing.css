@@ -45,12 +45,17 @@
   .intro-section {
     position: relative;
     z-index: -1;
-    overflow: hidden;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-right: 46vw;
     text-align: left;
+  }
+  .intro-section > *:not(img) {
+    max-width: 600px;
+  }
+  .intro-section > h1,
+  .intro-section > p {
+    width: 40vw;
   }
   .intro-section img {
     position: absolute;

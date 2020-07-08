@@ -1,10 +1,23 @@
 $breakpoint-tablet-426: 426px;
+$breakpoint-desktop-1441: 1441px;
+$breakpoint-desktop-2000: 2000px;
 
 .section-padding {
+    margin-right: 0;
     padding-right: 24px;
     padding-left: 24px;
     @media (min-width: $breakpoint-tablet-426) {
         padding-right: 11.5vw;
         padding-left: 11.5vw;
+    }
+
+    @media (min-width: $breakpoint-desktop-1441) {
+        padding-right: 17vw;
+        padding-left: 17vw;
+    }
+
+    @media (min-width: $breakpoint-desktop-2000) {
+        padding-right: 25vw;
+        padding-left: 25vw;
     }
 }
