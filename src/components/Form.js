@@ -115,7 +115,7 @@ function Form() {
     }
     return (
         <section className="form-section section-padding">
-            <div className="url-form-list-wrapper">
+            <div className="form-section-content">
                 <URLInput onUrlSubmit={shortenUrl} />
                 <ul className="url-list">{listItems}</ul>
             </div>
