@@ -8,7 +8,7 @@ $color-neutral-3: hsl(0, 0%, 75%);
 $color-neutral-4: hsl(258, 7%, 63%);
 $color-neutral-5: hsl(255, 11%, 22%);
 $color-neutral-6: hsl(260, 8%, 14%);
-$breakpoint-phone-landscape-330: 330px;
+$breakpoint-landscape-375: 375px;
 $breakpoint-tablet-426: 426px;
 $breakpoint-tablet-550: 550px;
 $breakpoint-desktop-769: 769px;
@@ -34,12 +34,17 @@ header {
         position: static;
         height: 144px;
     }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        position: static;
+    }
 }
 
 // ********************************************************
 // Nav
 nav {
     position: absolute;
+    z-index: 9;
     top: 96px;
     left: 50%;
     box-sizing: border-box;
@@ -51,8 +56,8 @@ nav {
     text-align: center;
     border-radius: 10px;
     background-color: $color-secondary-1;
-    @media (max-height: $breakpoint-phone-landscape-330) and (orientation: landscape) {
-        padding-bottom: 27px;
+    @media (max-height: $breakpoint-landscape-375) and (orientation: landscape) {
+        padding-bottom: 25px;
     }
 
     @media (min-width: $breakpoint-tablet-426) {
@@ -132,7 +137,7 @@ nav {
         }
     }
 
-    @media (max-height: $breakpoint-phone-landscape-330) and (orientation: landscape) {
+    @media (max-height: $breakpoint-landscape-375) and (orientation: landscape) {
         row-gap: 10px;
 
         a {

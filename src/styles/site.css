@@ -195,8 +195,15 @@ header {
   }
 }
 
+@media (max-height: 500px) and (orientation: landscape) {
+  header {
+    position: static;
+  }
+}
+
 nav {
   position: absolute;
+  z-index: 9;
   top: 96px;
   left: 50%;
   -webkit-box-sizing: border-box;
@@ -215,9 +222,9 @@ nav {
   background-color: #3b3054;
 }
 
-@media (max-height: 330px) and (orientation: landscape) {
+@media (max-height: 375px) and (orientation: landscape) {
   nav {
-    padding-bottom: 27px;
+    padding-bottom: 25px;
   }
 }
 
@@ -316,7 +323,7 @@ nav {
   }
 }
 
-@media (max-height: 330px) and (orientation: landscape) {
+@media (max-height: 375px) and (orientation: landscape) {
   .nav-list {
     row-gap: 10px;
   }
