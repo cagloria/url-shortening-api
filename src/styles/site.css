@@ -109,6 +109,14 @@ a:hover {
   background-color: #9ce3e3;
 }
 
+.button--copied {
+  background-color: #3b3054;
+}
+
+.button--copied:hover {
+  background-color: #7a62b7;
+}
+
 .input-field {
   font-family: "Poppins", sans-serif;
   font-size: 1em;
