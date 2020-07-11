@@ -110,7 +110,7 @@ function LinkForm() {
     const [lastCopiedId, setLastCopiedId] = useState(0);
 
     /**
-     * Sets lastCopiedId to the ID of the last copied item, lifted from URLItem.
+     * Sets lastCopiedId to the ID of the last copied item, lifted from LinkItem.
      * @param {Number} id   ID of the last copied item
      */
     function handleCopy(id) {
@@ -119,7 +119,7 @@ function LinkForm() {
 
     /**
      * Creates a JSON object of an id, the original URL, and the shortened URL,
-     * and pushes it into urlList.
+     * and pushes it into linkList.
      * @param {String} inputUrl     User input URL
      * @param {String} shortenedURL Shortened URL
      */

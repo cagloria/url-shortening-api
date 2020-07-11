@@ -4,6 +4,10 @@ import $ from "jquery";
 
 function Header() {
     const [navIsOpen, setNavIsOpen] = useState(false);
+    const [inDesktopLayout, setInDesktopLayout] = useState(
+        $(window).width() > 768 ? true : false
+    );
+    const linksTabIndex = inDesktopLayout || navIsOpen ? "0" : "-1";
 
     $("main, footer").click(function () {
         if (navIsOpen) {
@@ -12,9 +16,11 @@ function Header() {
     });
 
     $(window).resize(function () {
-        if ($(window).width() > 768 && navIsOpen) {
+        const $win = $(window);
+        if ($win.width() > 768 && navIsOpen) {
             setNavIsOpen(false);
         }
+        setInDesktopLayout($win.width() > 768);
     });
 
     function toggleNav() {
@@ -24,32 +30,44 @@ function Header() {
     return (
         <header className="section-padding">
             <img src={logo} alt="Shortly logo" className="logo" />
-            <nav className={navIsOpen ? "nav-open" : ""}>
-                <ul className="nav-list">
-                    <li className="nav-list__link-li">
-                        <a href="index.html">Features</a>
-                    </li>
-                    <li className="nav-list__link-li">
-                        <a href="index.html">Pricing</a>
-                    </li>
-                    <li className="nav-list__link-li">
-                        <a href="index.html">Resources</a>
-                    </li>
-                    <li className="nav-list__login-li nav-list__link-li">
-                        <a href="index.html">Login</a>
-                    </li>
-                    <li className="nav-list__sign-up-li">
-                        <button className="button">Sign Up</button>
-                    </li>
-                </ul>
-            </nav>
 
             <button
                 className={
-                    "nav-button" + (navIsOpen ? " nav-button--nav-open" : "")
+                    "nav-button" +
+                    (navIsOpen ? " nav-button--mobile-nav-open" : "")
                 }
                 onClick={toggleNav}
             ></button>
+
+            <nav className={navIsOpen ? "mobile-nav-open" : ""}>
+                <ul className="nav-list">
+                    <li className="nav-list__link-li">
+                        <a href="index.html" tabIndex={linksTabIndex}>
+                            Features
+                        </a>
+                    </li>
+                    <li className="nav-list__link-li">
+                        <a href="index.html" tabIndex={linksTabIndex}>
+                            Pricing
+                        </a>
+                    </li>
+                    <li className="nav-list__link-li">
+                        <a href="index.html" tabIndex={linksTabIndex}>
+                            Resources
+                        </a>
+                    </li>
+                    <li className="nav-list__login-li nav-list__link-li">
+                        <a href="index.html" tabIndex={linksTabIndex}>
+                            Login
+                        </a>
+                    </li>
+                    <li className="nav-list__sign-up-li">
+                        <button className="button" tabIndex={linksTabIndex}>
+                            Sign Up
+                        </button>
+                    </li>
+                </ul>
+            </nav>
         </header>
     );
 }

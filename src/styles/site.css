@@ -259,7 +259,7 @@ nav {
   }
 }
 
-.nav-open {
+.mobile-nav-open {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -390,11 +390,11 @@ nav {
   background-image: url("../../src/images/icon-nav-open-blue.svg");
 }
 
-.nav-button--nav-open {
+.nav-button--mobile-nav-open {
   background-image: url("../../src/images/icon-nav-close.svg");
 }
 
-.nav-button--nav-open:hover {
+.nav-button--mobile-nav-open:hover {
   background-image: url("../../src/images/icon-nav-close-blue.svg");
 }
 
