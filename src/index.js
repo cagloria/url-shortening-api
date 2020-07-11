@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Header from "./ui/Header.js";
 import Intro from "./ui/landing-page/Intro.js";
-import Form from "./components/Form.js";
+import LinkForm from "./components/LinkForm.js";
 import Statistics from "./ui/landing-page/Statistics.js";
 import Final from "./ui/landing-page/Final.js";
 import Footer from "./ui/Footer.js";
@@ -15,7 +15,7 @@ function LandingPage() {
             <Header />
             <main>
                 <Intro />
-                <Form />
+                <LinkForm />
                 <Statistics />
                 <Final />
             </main>

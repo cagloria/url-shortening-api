@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import $ from "jquery";
 
-function URLItem({ jsonObj, onItemCopy, isCopied }) {
+function LinkItem({ itemObj, onLinkCopy, isCopied }) {
     /**
      * Copies the shortened URL of this item to the user's clipboard. Lifts the
-     * item's id to Form to show that this item was the last one copied.
+     * item's id to LinkForm to show that this item was the last one copied.
      */
     function copyToClipboard() {
-        // Lift the item's id to Form
-        onItemCopy(jsonObj.id);
+        // Lift the item's id to LinkForm
+        onLinkCopy(itemObj.id);
 
         // Create temporary input field to copy text from
         let $text = $("<input>");
-        $text.val(jsonObj.shortened).css("filter", "opacity(0)");
+        $text.val(itemObj.shortened).css("filter", "opacity(0)");
         $("body").append($text);
 
         // Select and copy text
@@ -23,8 +23,8 @@ function URLItem({ jsonObj, onItemCopy, isCopied }) {
 
     return (
         <li>
-            <p className="url-list__original">{jsonObj.original}</p>
-            <p className="url-list__shortened">{jsonObj.shortened}</p>
+            <p className="link-list__original">{itemObj.original}</p>
+            <p className="link-list__shortened">{itemObj.shortened}</p>
             <button
                 onClick={copyToClipboard}
                 className={"button" + (isCopied ? " button--copied" : "")}
@@ -51,7 +51,7 @@ function URLInput({ onUrlSubmit }) {
 
     /**
      * Requests a shortened URL from the API, using the value of the URL input
-     * field. onUrlSubmit lifts its arguments to Form's shortenUrl() function.
+     * field. onUrlSubmit lifts its arguments to LinkForm's shortenUrl() function.
      * If there is an error, the error message will display it.
      */
     function getShortenedURL() {
@@ -104,9 +104,9 @@ function URLInput({ onUrlSubmit }) {
     );
 }
 
-function Form() {
+function LinkForm() {
     const [newId, updateId] = useState(1);
-    const [urlList, setUrlList] = useState([]);
+    const [linkList, setLinkList] = useState([]);
     const [lastCopiedId, setLastCopiedId] = useState(0);
 
     /**
@@ -124,8 +124,8 @@ function Form() {
      * @param {String} shortenedURL Shortened URL
      */
     function shortenUrl(inputUrl, shortenedURL) {
-        setUrlList(
-            urlList.concat({
+        setLinkList(
+            linkList.concat({
                 id: newId,
                 original: inputUrl,
                 shortened: shortenedURL,
@@ -138,12 +138,12 @@ function Form() {
         <section className="form-section section-padding">
             <div className="form-section-content">
                 <URLInput onUrlSubmit={shortenUrl} />
-                <ul className="url-list">
-                    {urlList.map((urlObj) => (
-                        <URLItem
-                            jsonObj={urlObj}
+                <ul className="link-list">
+                    {linkList.map((urlObj) => (
+                        <LinkItem
+                            itemObj={urlObj}
                             key={urlObj.id}
-                            onItemCopy={handleCopy}
+                            onLinkCopy={handleCopy}
                             isCopied={lastCopiedId === urlObj.id}
                         />
                     ))}
@@ -153,4 +153,4 @@ function Form() {
     );
 }
 
-export default Form;
+export default LinkForm;

@@ -183,7 +183,7 @@
   }
 }
 
-.url-list {
+.link-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +196,7 @@
   list-style-type: none;
 }
 
-.url-list li {
+.link-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,14 +212,14 @@
   background-color: white;
 }
 
-.url-list li p {
+.link-list li p {
   font-size: 0.9em;
   font-weight: 500;
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.url-list__original {
+.link-list__original {
   margin: 0;
   padding-top: 7px;
   padding-bottom: 8px;
@@ -227,14 +227,14 @@
   border-bottom: 1px solid #eff0f5;
 }
 
-.url-list__shortened {
+.link-list__shortened {
   margin: 0;
   padding-top: 13px;
   padding-bottom: 13px;
   color: #2acfcf;
 }
 
-.url-list .button {
+.link-list .button {
   font-size: 0.8em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -246,7 +246,7 @@
 }
 
 @media (min-width: 426px) {
-  .url-list .button {
+  .link-list .button {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -255,7 +255,7 @@
 }
 
 @media (min-width: 550px) {
-  .url-list li {
+  .link-list li {
     display: -ms-grid;
     display: grid;
     padding-bottom: 8px;
@@ -265,18 +265,18 @@
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }
-  .url-list__original {
+  .link-list__original {
     -ms-grid-row: 1;
     grid-row: 1;
     grid-column: 1 / -1;
   }
-  .url-list__shortened {
+  .link-list__shortened {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  .url-list .button {
+  .link-list .button {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -290,19 +290,19 @@
 }
 
 @media (min-width: 769px) {
-  .url-list li {
+  .link-list li {
     font-size: 1.4em;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 15px 8px 8px 16px;
   }
-  .url-list .button {
+  .link-list .button {
     font-size: 0.6em;
   }
 }
 
 @media (min-width: 1025px) {
-  .url-list li {
+  .link-list li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -311,15 +311,15 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .url-list li p {
+  .link-list li p {
     padding-top: 7px;
     padding-bottom: 7px;
   }
-  .url-list__original {
+  .link-list__original {
     margin-right: auto;
     border: 0;
   }
-  .url-list__shortened {
+  .link-list__shortened {
     margin-left: auto;
   }
 }
