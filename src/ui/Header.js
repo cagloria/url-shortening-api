@@ -43,7 +43,10 @@ function Header() {
                     (mobileNavOpen ? " nav-button--mobile-nav-open" : "")
                 }
                 onClick={toggleNav}
-                aria-label={mobileNavOpen ? "Close menu" : "Open menu"}
+                aria-label={
+                    mobileNavOpen ? "Close main menu" : "Open main menu"
+                }
+                aria-expanded={mobileNavOpen}
             ></button>
 
             <nav className={mobileNavOpen ? "mobile-nav-open" : ""}>
