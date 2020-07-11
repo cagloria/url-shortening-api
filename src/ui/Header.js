@@ -3,28 +3,34 @@ import logo from "../images/logo.svg";
 import $ from "jquery";
 
 function Header() {
-    const [navIsOpen, setNavIsOpen] = useState(false);
+    const [mobileNavOpen, setMobileNavOpen] = useState(false);
     const [inDesktopLayout, setInDesktopLayout] = useState(
         $(window).width() > 768 ? true : false
     );
-    const linksTabIndex = inDesktopLayout || navIsOpen ? "0" : "-1";
+    const linksTabIndex = inDesktopLayout || mobileNavOpen ? "0" : "-1";
 
     $("main, footer").click(function () {
-        if (navIsOpen) {
-            setNavIsOpen(false);
+        if (mobileNavOpen) {
+            setMobileNavOpen(false);
         }
     });
 
     $(window).resize(function () {
         const $win = $(window);
-        if ($win.width() > 768 && navIsOpen) {
-            setNavIsOpen(false);
+        if ($win.width() > 768 && mobileNavOpen) {
+            setMobileNavOpen(false);
         }
         setInDesktopLayout($win.width() > 768);
     });
 
+    $(window).scroll(function () {
+        if (mobileNavOpen) {
+            setMobileNavOpen(false);
+        }
+    });
+
     function toggleNav() {
-        setNavIsOpen(!navIsOpen);
+        setMobileNavOpen(!mobileNavOpen);
     }
 
     return (
@@ -34,12 +40,12 @@ function Header() {
             <button
                 className={
                     "nav-button" +
-                    (navIsOpen ? " nav-button--mobile-nav-open" : "")
+                    (mobileNavOpen ? " nav-button--mobile-nav-open" : "")
                 }
                 onClick={toggleNav}
             ></button>
 
-            <nav className={navIsOpen ? "mobile-nav-open" : ""}>
+            <nav className={mobileNavOpen ? "mobile-nav-open" : ""}>
                 <ul className="nav-list">
                     <li className="nav-list__link-li">
                         <a href="index.html" tabIndex={linksTabIndex}>
