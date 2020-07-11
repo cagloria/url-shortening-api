@@ -12,7 +12,7 @@ function Footer() {
 
             <div className="footer-nav">
                 <div className="footer-nav__category">
-                    <h4>Features</h4>
+                    <h1 className="footer-nav__heading">Features</h1>
                     <ul className="footer-nav__ul">
                         <li>
                             <a className="link-neutral-color" href="index.html">
@@ -29,7 +29,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-nav__category">
-                    <h4>Resources</h4>
+                    <h1 className="footer-nav__heading">Resources</h1>
                     <ul className="footer-nav__ul">
                         <li>
                             <a href="index.html">Blog</a>
@@ -44,7 +44,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-nav__category">
-                    <h4>Company</h4>
+                    <h1 className="footer-nav__heading">Company</h1>
                     <ul className="footer-nav__ul">
                         <li>
                             <a href="index.html">About</a>

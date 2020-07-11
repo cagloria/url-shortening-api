@@ -88,6 +88,7 @@ function URLInput({ onUrlSubmit }) {
                 type="url"
                 name="input-field"
                 id="input-field"
+                aria-label="Shorten a link"
                 className={
                     "input-field" +
                     (errorMessage.length > 0 ? " input-field--invalid" : "")

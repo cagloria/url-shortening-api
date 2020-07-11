@@ -3,10 +3,11 @@ $color-primary-2: hsl(180, 66%, 49%);
 $color-secondary-1: hsl(257, 27%, 26%);
 $color-accent-1: hsl(0, 87%, 67%);
 $color-neutral-1: hsl(0, 0%, 100%);
-$color-neutral-2: hsl(0, 0%, 75%);
-$color-neutral-3: hsl(258, 7%, 63%);
-$color-neutral-4: hsl(255, 11%, 22%);
-$color-neutral-5: hsl(260, 8%, 14%);
+$color-neutral-2: hsl(230, 25%, 95%);
+$color-neutral-3: hsl(0, 0%, 75%);
+$color-neutral-4: hsl(258, 7%, 63%);
+$color-neutral-5: hsl(255, 11%, 22%);
+$color-neutral-6: hsl(260, 8%, 14%);
 $breakpoint-tablet-550: 550px;
 $breakpoint-desktop-769: 769px;
 
@@ -17,14 +18,14 @@ footer {
     padding-top: 56px;
     padding-bottom: 24px;
     text-align: center;
-    background-color: $color-neutral-5;
+    background-color: $color-neutral-6;
     .logo {
         margin-bottom: 25px;
     }
 
     a {
         font-weight: 500;
-        color: $color-neutral-2;
+        color: $color-neutral-3;
     }
 
     p {
@@ -54,13 +55,18 @@ footer {
     margin-bottom: 6px;
 
     &__category {
-        h4 {
-            margin-bottom: 23px;
-        }
-
         &:not(:last-child) {
-            margin-bottom: 39px;
+            margin-bottom: 37px;
         }
+    }
+
+    &__heading {
+        font-size: 1em;
+        line-height: 30px;
+        margin-top: 18px;
+        margin-bottom: 21px;
+        letter-spacing: 0.01em;
+        color: $color-neutral-2;
     }
 
     &__ul {
@@ -82,6 +88,13 @@ footer {
         &__category {
             flex: 1;
             margin: 0;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop-769) {
+        &__heading {
+            margin-top: -3px;
+            margin-bottom: 20px;
         }
     }
 
