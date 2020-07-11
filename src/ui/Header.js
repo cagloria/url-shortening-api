@@ -43,32 +43,60 @@ function Header() {
                     (mobileNavOpen ? " nav-button--mobile-nav-open" : "")
                 }
                 onClick={toggleNav}
+                aria-label={mobileNavOpen ? "Close menu" : "Open menu"}
             ></button>
 
             <nav className={mobileNavOpen ? "mobile-nav-open" : ""}>
-                <ul className="nav-list">
-                    <li className="nav-list__link-li">
-                        <a href="index.html" tabIndex={linksTabIndex}>
+                <ul
+                    className="nav-list"
+                    role="menubar"
+                    aria-label="Main navigation"
+                >
+                    <li className="nav-list__link-li" role="none">
+                        <a
+                            href="index.html"
+                            tabIndex={linksTabIndex}
+                            role="menuitem"
+                        >
                             Features
                         </a>
                     </li>
-                    <li className="nav-list__link-li">
-                        <a href="index.html" tabIndex={linksTabIndex}>
+                    <li className="nav-list__link-li" role="none">
+                        <a
+                            href="index.html"
+                            tabIndex={linksTabIndex}
+                            role="menuitem"
+                        >
                             Pricing
                         </a>
                     </li>
-                    <li className="nav-list__link-li">
-                        <a href="index.html" tabIndex={linksTabIndex}>
+                    <li className="nav-list__link-li" role="none">
+                        <a
+                            href="index.html"
+                            tabIndex={linksTabIndex}
+                            role="menuitem"
+                        >
                             Resources
                         </a>
                     </li>
-                    <li className="nav-list__login-li nav-list__link-li">
-                        <a href="index.html" tabIndex={linksTabIndex}>
+                    <li
+                        className="nav-list__login-li nav-list__link-li"
+                        role="none"
+                    >
+                        <a
+                            href="index.html"
+                            tabIndex={linksTabIndex}
+                            role="menuitem"
+                        >
                             Login
                         </a>
                     </li>
-                    <li className="nav-list__sign-up-li">
-                        <button className="button" tabIndex={linksTabIndex}>
+                    <li className="nav-list__sign-up-li" role="none">
+                        <button
+                            className="button"
+                            tabIndex={linksTabIndex}
+                            role="menuitem"
+                        >
                             Sign Up
                         </button>
                     </li>

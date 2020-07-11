@@ -12,7 +12,7 @@ function Intro() {
             <button className="button">Get Started</button>
             <img
                 src={illustration}
-                alt="An illustration of a person sitting at a desk, using on a computer"
+                alt="An illustration of a person sitting at a desk, using a computer"
             />
         </section>
     );

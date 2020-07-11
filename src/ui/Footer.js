@@ -12,75 +12,119 @@ function Footer() {
 
             <div className="footer-nav">
                 <div className="footer-nav__category">
-                    <h1 className="footer-nav__heading">Features</h1>
-                    <ul className="footer-nav__ul">
-                        <li>
-                            <a className="link-neutral-color" href="index.html">
+                    <h1 className="footer-nav__heading" id="featuresHeading">
+                        Features
+                    </h1>
+                    <ul
+                        className="footer-nav__ul"
+                        aria-labelledby="featuresHeading"
+                        role="menubar"
+                    >
+                        <li role="none">
+                            <a
+                                className="link-neutral-color"
+                                href="index.html"
+                                role="menuitem"
+                            >
                                 Link Shortening
                             </a>
                         </li>
-                        <li>
-                            <a href="index.html">Branded Links</a>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Branded Links
+                            </a>
                         </li>
-                        <li>
-                            <a href="index.html">Analytics</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="footer-nav__category">
-                    <h1 className="footer-nav__heading">Resources</h1>
-                    <ul className="footer-nav__ul">
-                        <li>
-                            <a href="index.html">Blog</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Developers</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Support</a>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Analytics
+                            </a>
                         </li>
                     </ul>
                 </div>
 
                 <div className="footer-nav__category">
-                    <h1 className="footer-nav__heading">Company</h1>
-                    <ul className="footer-nav__ul">
-                        <li>
-                            <a href="index.html">About</a>
+                    <h1 className="footer-nav__heading" id="resourcesHeading">
+                        Resources
+                    </h1>
+                    <ul
+                        className="footer-nav__ul"
+                        role="menubar"
+                        aria-labelledby="resourcesHeading"
+                    >
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Blog
+                            </a>
                         </li>
-                        <li>
-                            <a href="index.html">Our Team</a>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Developers
+                            </a>
                         </li>
-                        <li>
-                            <a href="index.html">Careers</a>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Support
+                            </a>
                         </li>
-                        <li>
-                            <a href="index.html">Contact</a>
+                    </ul>
+                </div>
+
+                <div className="footer-nav__category">
+                    <h1 className="footer-nav__heading" id="companyHeading">
+                        Company
+                    </h1>
+                    <ul
+                        className="footer-nav__ul"
+                        role="menubar"
+                        aria-labelledby="companyHeading"
+                    >
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                About
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Our Team
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Careers
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="index.html" role="menuitem">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <ul className="social-list">
-                <li>
-                    <a href="index.html">
-                        <img src={iconFacebook} alt="Facebook" />
+            <ul
+                className="social-list"
+                role="menubar"
+                aria-label="Social media"
+            >
+                <li role="none">
+                    <a href="index.html" role="menuitem" aria-label="Facebook">
+                        <img src={iconFacebook} alt="" />
                     </a>
                 </li>
-                <li>
-                    <a href="index.html">
-                        <img src={iconTwitter} alt="Twitter" />
+                <li role="none">
+                    <a href="index.html" role="menuitem" aria-label="Twitter">
+                        <img src={iconTwitter} alt="" />
                     </a>
                 </li>
-                <li>
-                    <a href="index.html">
-                        <img src={iconPinterest} alt="Pinterest" />
+                <li role="none">
+                    <a href="index.html" role="menuitem" aria-label="Pinterest">
+                        <img src={iconPinterest} alt="" />
                     </a>
                 </li>
-                <li>
-                    <a href="index.html">
-                        <img src={iconInstagram} alt="Instagram" />
+                <li role="none">
+                    <a href="index.html" role="menuitem" aria-label="Instagram">
+                        <img src={iconInstagram} alt="" />
                     </a>
                 </li>
             </ul>
