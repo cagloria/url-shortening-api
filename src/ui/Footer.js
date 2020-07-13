@@ -134,7 +134,7 @@ function Footer() {
                 <a href="https://www.frontendmentor.io?ref=challenge">
                     Frontend Mentor
                 </a>
-                . Coded by <a href="https://github.com/cagloria">cagloria</a>.
+                . Coded by <a href="https://github.com/cagloria">C.A. Gloria</a>.
             </p>
         </footer>
     );

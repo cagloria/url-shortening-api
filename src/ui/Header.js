@@ -37,23 +37,25 @@ function Header() {
         <header className="section-padding">
             <img src={logo} alt="Shortly logo" className="logo" />
 
-            <button
-                className={
-                    "nav-button" +
-                    (mobileNavOpen ? " nav-button--mobile-nav-open" : "")
-                }
-                onClick={toggleNav}
-                aria-label={
-                    mobileNavOpen ? "Close main menu" : "Open main menu"
-                }
-                aria-expanded={mobileNavOpen}
-            ></button>
+            <nav>
+                <button
+                    className={
+                        "nav-button" +
+                        (mobileNavOpen ? " nav-button--mobile-nav-open" : "")
+                    }
+                    onClick={toggleNav}
+                    aria-label="Main menu"
+                    aria-expanded={mobileNavOpen}
+                ></button>
 
-            <nav className={mobileNavOpen ? "mobile-nav-open" : ""}>
                 <ul
-                    className="nav-list"
+                    className={
+                        "nav-list" +
+                        (mobileNavOpen ? " nav-list--open-mobile" : "")
+                    }
                     role="menubar"
                     aria-label="Main navigation"
+                    aria-hidden={!mobileNavOpen && !inDesktopLayout}
                 >
                     <li className="nav-list__link-li" role="none">
                         <a
@@ -83,7 +85,7 @@ function Header() {
                         </a>
                     </li>
                     <li
-                        className="nav-list__login-li nav-list__link-li"
+                        className="nav-list__link-li nav-list__border-li"
                         role="none"
                     >
                         <a
@@ -94,7 +96,7 @@ function Header() {
                             Login
                         </a>
                     </li>
-                    <li className="nav-list__sign-up-li" role="none">
+                    <li className="nav-list__button-li" role="none">
                         <button
                             className="button"
                             tabIndex={linksTabIndex}
