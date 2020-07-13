@@ -84,10 +84,10 @@ function Header() {
                             Resources
                         </a>
                     </li>
-                    <li
-                        className="nav-list__link-li nav-list__border-li"
-                        role="none"
-                    >
+                    <li className="nav-list__border-li" role="none">
+                        <div></div>
+                    </li>
+                    <li className="nav-list__link-li" role="none">
                         <a
                             href="index.html"
                             tabIndex={linksTabIndex}

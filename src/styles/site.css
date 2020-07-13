@@ -217,14 +217,20 @@ header {
 .nav-list {
   position: absolute;
   z-index: 9;
-  top: 96px;
+  top: 100px;
   left: 50%;
   display: -ms-grid;
   display: grid;
-  width: 74%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 87%;
   max-width: 430px;
+  height: 383px;
   margin: 0;
-  padding: 27px 25px 40px;
+  padding: 22px 25px 35px;
   list-style-type: none;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
@@ -237,7 +243,8 @@ header {
   background-color: #3b3054;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-auto-rows: auto;
+  -ms-grid-rows: (1fr)[3] auto (1fr)[2];
+      grid-template-rows: repeat(3, 1fr) auto repeat(2, 1fr);
 }
 
 .nav-list--open-mobile {
@@ -245,11 +252,22 @@ header {
           transform: translate(-50%, 0);
 }
 
+.nav-list__link-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .nav-list a {
   font-size: 1em;
   font-weight: 700;
-  line-height: 55px;
-  display: block;
+  width: 100%;
   color: #eff0f5;
 }
 
@@ -257,10 +275,8 @@ header {
   color: #2acfcf;
 }
 
-.nav-list__border-li {
-  margin-top: 19px;
-  padding-top: 17px;
-  padding-bottom: 10px;
+.nav-list__border-li div {
+  margin: 16px 0;
   border-top: 1px solid #9e9aa7;
 }
 
@@ -281,17 +297,15 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 300px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     -ms-grid-rows: (auto)[3];
         grid-template-rows: repeat(3, auto);
-    grid-auto-flow: row;
   }
   .nav-list__border-li {
-    margin: 0;
-    padding: 0;
-    border: 0;
+    display: none;
   }
   .nav-list__button-li {
     -ms-flex-item-align: center;
@@ -305,13 +319,12 @@ header {
   }
 }
 
-@media (max-height: 375px) and (orientation: landscape) {
+@media (max-height: 475px) and (orientation: landscape) {
   .nav-list {
+    top: 80px;
+    height: 65vh;
     padding-bottom: 25px;
     row-gap: 10px;
-  }
-  .nav-list a {
-    line-height: 45px;
   }
 }
 
