@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
-$color-primary: hsl(180, 66%, 49%);
+$color-primary-1: hsl(180, 56%, 75%);
+$color-primary-2: hsl(180, 66%, 49%);
 $color-primary-light: hsl(180, 56%, 75%);
 $color-secondary-1: hsl(257, 27%, 26%);
 $color-secondary-light: hsl(257, 37%, 55%);
@@ -68,7 +69,25 @@ li {
 a {
     text-decoration: none;
     &:hover {
-        color: $color-primary;
+        color: $color-primary-2;
+    }
+}
+
+.skip-link {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 4px 10px;
+    transform: translateY(-40px);
+    color: $color-neutral-1;
+    background-color: $color-neutral-6;
+    transition: transform 0.3s;
+    &:hover {
+        color: $color-primary-2;
+    }
+    &--focused {
+        transform: translateY(0);
     }
 }
 
@@ -85,7 +104,7 @@ a {
     color: $color-neutral-1;
     border: 0;
     border-radius: 30px;
-    background-color: $color-primary;
+    background-color: $color-primary-2;
     &:hover {
         cursor: pointer;
         background-color: $color-primary-light;
