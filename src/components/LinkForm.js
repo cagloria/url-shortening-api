@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import $ from "jquery";
 
 function LinkItem({ itemObj, onLinkCopy, isCopied }) {
@@ -51,8 +51,8 @@ function URLInput({ onUrlSubmit }) {
 
     /**
      * Requests a shortened URL from the API, using the value of the URL input
-     * field. onUrlSubmit lifts its arguments to LinkForm's shortenUrl()
-     * function. If there is an error, the error message will display it.
+     * field. onUrlSubmit lifts its arguments to LinkForm's shortenUrl() function.
+     * If there is an error, the error message will display it.
      */
     function getShortenedURL() {
         $.post("https://rel.ink/api/links/", { url: inputValue })
@@ -106,29 +106,8 @@ function URLInput({ onUrlSubmit }) {
 
 function LinkForm() {
     const [newId, updateId] = useState(1);
-    const [linkList, setLinkList] = useState(
-        getLocalStorage() ? getLocalStorage() : []
-    );
+    const [linkList, setLinkList] = useState([]);
     const [lastCopiedId, setLastCopiedId] = useState(0);
-
-    useEffect(() => {
-        localStorage.setItem("linkList", JSON.stringify(linkList));
-    });
-
-    /**
-     * Return the data of linkList from the browser's local storage.
-     */
-    function getLocalStorage() {
-        return JSON.parse(localStorage.getItem("linkList"));
-    }
-
-    // function getLastId() {
-    //     const lastId = getLocalStorage()[getLocalStorage.length - 1].id;
-    //     if (lastId > 0) {
-    //         return lastId + 1;
-    //     }
-    //     return 1;
-    // }
 
     /**
      * Sets lastCopiedId to the ID of the last copied item, lifted from LinkItem.
