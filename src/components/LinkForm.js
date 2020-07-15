@@ -37,7 +37,8 @@ function LinkItem({ itemObj, onLinkCopy, isCopied }) {
 
 function URLInput({ onUrlSubmit }) {
     const [inputValue, setInputValue] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
+    const [message, setMessage] = useState("");
+    const [errorOcurred, setErrorOcurred] = useState(false);
 
     /**
      * Handles the change of the URL input field. inputValue is changed to the
@@ -46,7 +47,8 @@ function URLInput({ onUrlSubmit }) {
      */
     function handleChange(event) {
         setInputValue(event.target.value);
-        setErrorMessage("");
+        setMessage("");
+        setErrorOcurred(false);
     }
 
     /**
@@ -55,15 +57,17 @@ function URLInput({ onUrlSubmit }) {
      * function. If there is an error, the error message will display it.
      */
     function getShortenedURL() {
+        setMessage("Processing request...");
         $.post("https://rel.ink/api/links/", { url: inputValue })
             .done(function (data) {
                 onUrlSubmit(inputValue, "https://rel.ink/" + data.hashid);
+                setMessage("");
+                setErrorOcurred(false);
             })
             .fail(function (xhr, status, error) {
                 console.log(xhr);
-                setErrorMessage(
-                    "Error: " + xhr.status + ". " + xhr.responseText
-                );
+                setMessage("Error: " + xhr.status + ". " + xhr.responseText);
+                setErrorOcurred(true);
             });
     }
 
@@ -74,7 +78,8 @@ function URLInput({ onUrlSubmit }) {
     function handleSubmit(event) {
         event.preventDefault();
         if (inputValue === "") {
-            setErrorMessage("Please add a link");
+            setMessage("Please add a link");
+            setErrorOcurred(true);
         } else {
             getShortenedURL();
             setInputValue("");
@@ -91,13 +96,18 @@ function URLInput({ onUrlSubmit }) {
                 aria-label="Shorten a link"
                 className={
                     "input-field" +
-                    (errorMessage.length > 0 ? " input-field--invalid" : "")
+                    (errorOcurred ? " input-field--invalid" : "")
                 }
                 onChange={handleChange}
                 placeholder="Shorten a link here..."
             />
-            <p className="url-form__error-message">
-                {errorMessage.length > 0 ? errorMessage : null}
+            <p
+                className={
+                    "url-form__error-message" +
+                    (errorOcurred ? " error-color" : "")
+                }
+            >
+                {message}
             </p>
             <input type="submit" value="Shorten it!" className="button" />
         </form>

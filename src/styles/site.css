@@ -77,6 +77,10 @@ li {
   color: #9e9aa7;
 }
 
+.error-color {
+  color: #f46262 !important;
+}
+
 a {
   text-decoration: none;
 }
