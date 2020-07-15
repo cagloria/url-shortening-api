@@ -105,7 +105,7 @@ function URLInput({ onUrlSubmit }) {
 }
 
 function LinkForm() {
-    const [newId, updateId] = useState(1);
+    const [newId, updateId] = useState(getNewId());
     const [linkList, setLinkList] = useState(
         getLocalStorage() ? getLocalStorage() : []
     );
@@ -122,16 +122,21 @@ function LinkForm() {
         return JSON.parse(localStorage.getItem("linkList"));
     }
 
-    // function getLastId() {
-    //     const lastId = getLocalStorage()[getLocalStorage.length - 1].id;
-    //     if (lastId > 0) {
-    //         return lastId + 1;
-    //     }
-    //     return 1;
-    // }
+    /**
+     * Check for data in local storage and set the state of newId.
+     * @returns ID of the next item to be entered
+     */
+    function getNewId() {
+        if (!getLocalStorage() || getLocalStorage().length === 0) {
+            return 1;
+        }
+        const lastId = getLocalStorage()[getLocalStorage().length - 1].id;
+        return lastId + 1;
+    }
 
     /**
-     * Sets lastCopiedId to the ID of the last copied item, lifted from LinkItem.
+     * Sets lastCopiedId to the ID of the last copied item, lifted from
+     * LinkItem.
      * @param {Number} id   ID of the last copied item
      */
     function handleCopy(id) {
