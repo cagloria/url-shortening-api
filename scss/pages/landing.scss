@@ -193,9 +193,11 @@ $breakpoint-desktop-1025: 1025px;
     }
 
     &__original {
+        overflow: hidden;
         margin: 0;
         padding-top: 7px;
         padding-bottom: 8px;
+        text-overflow: ellipsis;
         color: $color-neutral-6;
         border-bottom: 1px solid $color-neutral-2;
     }
@@ -219,7 +221,6 @@ $breakpoint-desktop-1025: 1025px;
 
     @media (min-width: $breakpoint-tablet-426) {
         .button {
-            align-self: center;
             max-width: 100px;
         }
     }
@@ -280,6 +281,10 @@ $breakpoint-desktop-1025: 1025px;
 
         &__shortened {
             margin-left: auto;
+        }
+
+        .button {
+            align-self: flex-start;
         }
     }
 }

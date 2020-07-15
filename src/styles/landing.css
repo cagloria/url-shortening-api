@@ -220,9 +220,11 @@
 }
 
 .link-list__original {
+  overflow: hidden;
   margin: 0;
   padding-top: 7px;
   padding-bottom: 8px;
+  text-overflow: ellipsis;
   color: #232127;
   border-bottom: 1px solid #eff0f5;
 }
@@ -247,9 +249,6 @@
 
 @media (min-width: 426px) {
   .link-list .button {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
     max-width: 100px;
   }
 }
@@ -321,6 +320,10 @@
   }
   .link-list__shortened {
     margin-left: auto;
+  }
+  .link-list .button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 
