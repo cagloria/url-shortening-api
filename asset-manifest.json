@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/url-shortening-api/static/css/main.2222bc68.chunk.css",
+    "main.js": "/url-shortening-api/static/js/main.7bd9ca12.chunk.js",
+    "main.js.map": "/url-shortening-api/static/js/main.7bd9ca12.chunk.js.map",
+    "runtime-main.js": "/url-shortening-api/static/js/runtime-main.49323ceb.js",
+    "runtime-main.js.map": "/url-shortening-api/static/js/runtime-main.49323ceb.js.map",
+    "static/js/2.b3bfaabf.chunk.js": "/url-shortening-api/static/js/2.b3bfaabf.chunk.js",
+    "static/js/2.b3bfaabf.chunk.js.map": "/url-shortening-api/static/js/2.b3bfaabf.chunk.js.map",
+    "index.html": "/url-shortening-api/index.html",
+    "precache-manifest.23fc1f1a240eff649f530b0adbe1e7fc.js": "/url-shortening-api/precache-manifest.23fc1f1a240eff649f530b0adbe1e7fc.js",
+    "service-worker.js": "/url-shortening-api/service-worker.js",
+    "static/css/main.2222bc68.chunk.css.map": "/url-shortening-api/static/css/main.2222bc68.chunk.css.map",
+    "static/js/2.b3bfaabf.chunk.js.LICENSE.txt": "/url-shortening-api/static/js/2.b3bfaabf.chunk.js.LICENSE.txt",
+    "static/media/landing.css": "/url-shortening-api/static/media/bg-stats-mobile.0c75d035.svg",
+    "static/media/icon-brand-recognition.svg": "/url-shortening-api/static/media/icon-brand-recognition.1922b68a.svg",
+    "static/media/icon-detailed-records.svg": "/url-shortening-api/static/media/icon-detailed-records.e3d9caa9.svg",
+    "static/media/icon-facebook.svg": "/url-shortening-api/static/media/icon-facebook.7febcff9.svg",
+    "static/media/icon-fully-customizable.svg": "/url-shortening-api/static/media/icon-fully-customizable.cc099cea.svg",
+    "static/media/icon-instagram.svg": "/url-shortening-api/static/media/icon-instagram.996b697c.svg",
+    "static/media/site.css": "/url-shortening-api/static/media/icon-nav-open.0bee0ad0.svg",
+    "static/media/icon-pinterest.svg": "/url-shortening-api/static/media/icon-pinterest.c557c3d4.svg",
+    "static/media/icon-twitter.svg": "/url-shortening-api/static/media/icon-twitter.cb4fea0b.svg",
+    "static/media/illustration-working.svg": "/url-shortening-api/static/media/illustration-working.5029d049.svg",
+    "static/media/logo-white.svg": "/url-shortening-api/static/media/logo-white.f86beaf3.svg",
+    "static/media/logo.svg": "/url-shortening-api/static/media/logo.6387840f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49323ceb.js",
+    "static/js/2.b3bfaabf.chunk.js",
+    "static/css/main.2222bc68.chunk.css",
+    "static/js/main.7bd9ca12.chunk.js"
+  ]
+}
