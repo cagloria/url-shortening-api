@@ -23,16 +23,19 @@ function URLInput({ onUrlSubmit }) {
      * function. If there is an error, the error message will display it.
      */
     function getShortenedURL() {
-        setMessage("Processing request...");
-        $.post("https://rel.ink/api/links/", { url: inputValue })
+        setMessage("Getting shortened URL...");
+        $.post("https://api.shrtco.de/v2/shorten?url=", { url: inputValue })
             .done(function (data) {
-                onUrlSubmit(inputValue, "https://rel.ink/" + data.hashid);
+                onUrlSubmit(inputValue, "shrtco.de/" + data.result.code);
+                console.log(data);
                 setMessage("");
                 setErrorOcurred(false);
             })
             .fail(function (xhr, status, error) {
                 console.log(xhr);
-                setMessage("Error: " + xhr.status + ". " + xhr.responseText);
+                setMessage(
+                    "Error: " + xhr.status + ". " + xhr.responseJSON.error
+                );
                 setErrorOcurred(true);
             });
     }
